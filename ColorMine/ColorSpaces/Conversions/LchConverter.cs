@@ -16,21 +16,30 @@ namespace ColorMine.ColorSpaces.Conversions
             // convert from radians to degrees
             if (h > 0)
             {
-                h = (h/Math.PI)*180;
+                h = (h / Math.PI) * 180.0;
             }
             else
             {
-                h = 360 - (Math.Abs(h)/Math.PI)*180;
+                h = 360 - (Math.Abs(h)/Math.PI)*180.0;
+            }
+
+            if (h < 0)
+            {
+                h += 360.0;
+            }
+            else if(h >= 360)
+            {
+                h -= 360.0;
             }
 
             item.L = lab.L;
             item.C = Math.Sqrt(Math.Pow(lab.A,2) + Math.Pow(lab.B,2));
-            item.H = h % 360;
+            item.H = h;
         }
 
         internal static IRgb ToColor(ILch item)
         {
-            var hRadians = (Math.PI * item.H) / 180.0;
+            var hRadians = item.H * Math.PI / 180.0;
             var lab = new Lab
                 {
                     L = item.L,

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 
 namespace ColorMine.ColorSpaces.Conversions
 {
@@ -20,9 +19,9 @@ namespace ColorMine.ColorSpaces.Conversions
         internal static IRgb ToColor(IXyz item)
         {
             // (Observer = 2°, Illuminant = D65)
-            var x = item.X / 100;
-            var y = item.Y / 100;
-            var z = item.Z / 100;
+            var x = item.X / 100.0;
+            var y = item.Y / 100.0;
+            var z = item.Z / 100.0;
 
             var r = x * 3.2406 + y * -1.5372 + z * -0.4986;
             var g = x * -0.9689 + y * 1.8758 + z * 0.0415;
@@ -40,14 +39,17 @@ namespace ColorMine.ColorSpaces.Conversions
             };
         }
 
-        private static int ToRgb(double n)
+        private static double ToRgb(double n)
         {
-            return Math.Min(255, Math.Max(0, (int) (n*255)));
+            var result = 255.0 * n;
+            if (result < 0) return 0;
+            if (result > 255) return 255;
+            return result;
         }
 
         private static double PivotRgb(double n)
         {
-            return (n > 0.04045 ? Math.Pow((n + 0.055)/1.055, 2.4) : n/12.92)*100;
+            return (n > 0.04045 ? Math.Pow((n + 0.055)/1.055, 2.4) : n/12.92)*100.0;
         }
     }
 }

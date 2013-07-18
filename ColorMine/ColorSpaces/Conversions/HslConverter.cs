@@ -10,8 +10,8 @@ namespace ColorMine.ColorSpaces.Conversions
             // TODO Losing precision
             var msColor = Color.FromArgb((int)color.R, (int)color.G, (int)color.B);
             item.H = msColor.GetHue();
-            item.S = msColor.GetSaturation() * 100;
-            item.L = msColor.GetBrightness() * 100;
+            item.S = msColor.GetSaturation() * 100.0;
+            item.L = msColor.GetBrightness() * 100.0;
         }
 
         internal static IRgb ToColor(IHsl item)
@@ -20,8 +20,8 @@ namespace ColorMine.ColorSpaces.Conversions
             var r = 0.0;
             var g = 0.0;
             var b = 0.0;
-            var s = item.S / 100;
-            var l = item.L/100;
+            var s = item.S / 100.0;
+            var l = item.L / 100.0;
 
             if (!l.BasicallyEqualTo(0))
             {
@@ -41,9 +41,9 @@ namespace ColorMine.ColorSpaces.Conversions
             }
             return new Rgb
                 {
-                    R = 255*r,
-                    G = 255*g,
-                    B = 255*b
+                    R = 255.0 * r,
+                    G = 255.0 * g,
+                    B = 255.0 * b
                 };
         }
 
@@ -70,8 +70,8 @@ namespace ColorMine.ColorSpaces.Conversions
 
         private static double MoveIntoRange(double temp3)
         {
-            if (temp3 < 0.0) return temp3 + 1;
-            if (temp3 > 1.0) return temp3 - 1;
+            if (temp3 < 0.0) return temp3 + 1.0;
+            if (temp3 > 1.0) return temp3 - 1.0;
             return temp3;
         }
     }

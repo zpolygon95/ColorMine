@@ -479,7 +479,7 @@ namespace ColorMine.Test.ColorSpaces
             public void RedLabToCmy()
             {
 				var knownColor = new Lab { L = 53.233, A = 80.109, B = 67.220, };
-				var expectedColor = new Cmy { C = 0.0039, M = .99970, Y = 1, };
+				var expectedColor = new Cmy { C = 0.0000035, M = .99970, Y = 1, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -488,7 +488,7 @@ namespace ColorMine.Test.ColorSpaces
             public void RedLabToCmyk()
             {
 				var knownColor = new Lab { L = 53.233, A = 80.109, B = 67.220, };
-				var expectedColor = new Cmyk { C = 0.0039, M = .99970, Y = 1, K = 0, };
+				var expectedColor = new Cmyk { C = 0, M = .99970, Y = 1, K = .0000035, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -524,7 +524,7 @@ namespace ColorMine.Test.ColorSpaces
             public void RedLabToRgb()
             {
 				var knownColor = new Lab { L = 53.233, A = 80.109, B = 67.220, };
-				var expectedColor = new Rgb { R = 255, G = 0, B = 0, };
+				var expectedColor = new Rgb { R = 255, G = .076, B = .0017, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -559,7 +559,7 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToCmy()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Cmy { C = .5215, M = .99993, Y = 1, };
+				var expectedColor = new Cmy { C = .509804, M = .99986, Y = 1, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -568,7 +568,7 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToCmyk()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Cmyk { C = 0, M = .984, Y = 1, K = .49804, };
+				var expectedColor = new Cmyk { C = .0, M = .99972, Y = 1, K = .50980, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -577,7 +577,7 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToHsl()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Hsl { H = 0, S = 100, L = 50, };
+				var expectedColor = new Hsl { H = 0, S = 100, L = 24.5, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -586,7 +586,7 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToLab()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Lab { L = 25.531, A = 48.055, B = 38.059, };
+				var expectedColor = new Lab { L = 24.829, A = 47.237, B = 37.146, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -604,7 +604,7 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToRgb()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Rgb { R = 125, G = 0.02, B = 0, };
+				var expectedColor = new Rgb { R = 125, G = .03555, B = .00182, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -613,7 +613,7 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToXyz()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Xyz { X = 8.902, Y = 4.589, Z = .417, };
+				var expectedColor = new Xyz { X = 8.458, Y = 4.360, Z = .396, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -622,7 +622,87 @@ namespace ColorMine.Test.ColorSpaces
             public void MaroonLchToYxy()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Yxy { Y1 = 21.260, X = 0.64007, Y2 = .32997, };
+				var expectedColor = new Yxy { Y1 = 4.360, X = 0.64005, Y2 = .32998, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+        }
+	}
+	public class XyzTest
+    {
+		[TestClass]
+        public class To : ColorSpaceTest
+        {
+			
+			[TestMethod]
+            public void RivergumXyzToCmy()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Cmy { C = .614, M = .55494, Y = .62627, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToCmyk()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Cmyk { C = .1327, M = 0, Y = .16028, K = .55494, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToHsl()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Hsl { H = 109.999, S = 8.654, L = 40.7843, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToLab()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Lab { L = 46.140, A = -9.421, B = 8.218, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToLch()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Lch { L = 46.140, C = 12.502, H = 138.898, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToRgb()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Rgb { R = 98.43, G = 113.49, B = 95.30, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToXyz()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void RivergumXyzToYxy()
+            {
+				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
+				var expectedColor = new Yxy { Y1 = 15.372, X = .31493, Y2 = .36892, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
