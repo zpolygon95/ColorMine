@@ -5,7 +5,7 @@ namespace ColorMine.ColorSpaces.Conversions
 {
     // Code lovingly inspired by StackOverflow.
     // Question/Answer: http://stackoverflow.com/questions/359612/how-to-change-rgb-color-to-hsv/1626175#1626175
-    // Submitter: http://stackoverflow.com/users/12971/greg
+    // Submitter: Greg http://stackoverflow.com/users/12971/greg
 
     internal static class HsvConverter
     {
