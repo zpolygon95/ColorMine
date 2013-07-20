@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace ColorMine.ColorSpaces.Conversions
 {
-    // Code lovingly inspired by StackOverflow.
+    // Code lovingly copied from StackOverflow (and tweaked a bit)
     // Question/Answer: http://stackoverflow.com/questions/359612/how-to-change-rgb-color-to-hsv/1626175#1626175
     // Submitter: Greg http://stackoverflow.com/users/12971/greg
 
