@@ -93,6 +93,15 @@ namespace ColorMine.Test.ColorSpaces
             }
 			
 			[TestMethod]
+            public void WhiteRgbToHsv()
+            {
+				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
+				var expectedColor = new Hsv { H = 0, S = 0, V = 1, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
             public void BlackRgbToCmy()
             {
 				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
@@ -174,6 +183,15 @@ namespace ColorMine.Test.ColorSpaces
             }
 			
 			[TestMethod]
+            public void BlackRgbToHsv()
+            {
+				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
+				var expectedColor = new Hsv { H = 0, S = 0, V = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
             public void GoldenrodRgbToCmy()
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
@@ -250,6 +268,15 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
 				var expectedColor = new Luv { L = 70.816, U = 44.368, V = 69.994, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void GoldenrodRgbToHsv()
+            {
+				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
+				var expectedColor = new Hsv { H = 42.903, S = .85, V = .85, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -828,6 +855,95 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
 				var expectedColor = new Luv { L = 77.704, U = .001, V = -.013, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+        }
+	}
+	public class HsvTest
+    {
+		[TestClass]
+        public class To : ColorSpaceTest
+        {
+			
+			[TestMethod]
+            public void AquamarineHsvToCmy()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Cmy { C = .50196, M = 0, Y = .16666, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToCmyk()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Cmyk { C = .5, M = 0, Y = .16666, K = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToHsl()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Hsl { H = 160, S = 100, L = 74.9019, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToLab()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Lab { L = 92.036, A = -45.521, B = 9.49689, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToLch()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Lch { L = 92.036, C = 46.545, H = 167.957, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToRgb()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Rgb { R = 127, G = 255, B = 212, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToXyz()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Xyz { X = 56.396, Y = 80.785, Z = 74.908, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToYxy()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Yxy { Y1 = 80.785, X = .26591, Y2 = .38090, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AquamarineHsvToLuv()
+            {
+				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Luv { L = 92.036, U = -55.917, V = 21.99756, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }

@@ -64,4 +64,11 @@
       <dataPoint label="K" min="0" max="1"/>
     </dataPoints>
   </colorSpace>
+  <colorSpace name="Hsv">
+    <dataPoints>
+      <dataPoint label="H" min="0" max="360"/>
+      <dataPoint label="S" min="0" max="1"/>
+      <dataPoint label="V" min="0" max="1"/>
+    </dataPoints>
+  </colorSpace>
 </colorSpaces>
