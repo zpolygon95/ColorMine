@@ -221,4 +221,28 @@ namespace ColorMine.ColorSpaces
         }
     }
 
+	public interface IHsv : IColorSpace
+    {
+		double H { get; set; }
+		double S { get; set; }
+		double V { get; set; }
+    }
+
+    public class Hsv : ColorSpace, IHsv
+    {
+		public double H { get; set; }
+		public double S { get; set; }
+		public double V { get; set; }
+
+        public override void Initialize(IRgb color)
+        {
+            HsvConverter.ToColorSpace(color,this);
+        }
+
+        public override IRgb ToRgb()
+        {
+            return HsvConverter.ToColor(this);
+        }
+    }
+
 }
