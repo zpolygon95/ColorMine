@@ -35,6 +35,13 @@
       <dataPoint label="H" min="0" max="360"/>
     </dataPoints>
   </colorSpace>
+  <colorSpace name="Luv" description="CIE-Luv">
+    <dataPoints>
+      <dataPoint label="L" min="0" max="100"/>
+      <dataPoint label="U"/>
+      <dataPoint label="V"/>
+    </dataPoints>
+  </colorSpace>
   <colorSpace name="Yxy">
     <dataPoints>
       <dataPoint label="Y1"/>

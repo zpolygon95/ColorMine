@@ -80,6 +80,15 @@ namespace ColorMine.Test.ColorSpaces
 			Assert.IsTrue(CloseEnough(expectedColor.X,target.X),"(X)" + expectedColor.X + " != " + target.X);
 			Assert.IsTrue(CloseEnough(expectedColor.Y2,target.Y2),"(Y2)" + expectedColor.Y2 + " != " + target.Y2);
 		}
+
+		protected static void ExpectedValuesForKnownColor(IColorSpace knownColor, ILuv expectedColor)
+		{
+			var target = knownColor.To<Luv>();
+
+			Assert.IsTrue(CloseEnough(expectedColor.L,target.L),"(L)" + expectedColor.L + " != " + target.L);
+			Assert.IsTrue(CloseEnough(expectedColor.U,target.U),"(U)" + expectedColor.U + " != " + target.U);
+			Assert.IsTrue(CloseEnough(expectedColor.V,target.V),"(V)" + expectedColor.V + " != " + target.V);
+		}
 		private static bool CloseEnough(double a, double b)
 		{
 			// Define the tolerance for variation in their values 

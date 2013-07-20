@@ -4,10 +4,6 @@ namespace ColorMine.ColorSpaces.Conversions
 {
     internal static class LchConverter
     {
-        // http://www.brucelindbloom.com/index.html?Eqn_Lab_to_LCH.html
-        // http://www.easyrgb.com/index.php?X=MATH&H=09#text9
-        // http://www.colourphil.co.uk/lab_lch_colour_space.html
-
         internal static void ToColorSpace(IRgb color, ILch item)
         {
             var lab = color.To<Lab>();

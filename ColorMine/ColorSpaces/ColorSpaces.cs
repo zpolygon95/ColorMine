@@ -123,6 +123,30 @@ namespace ColorMine.ColorSpaces
         }
     }
 
+	public interface ILuv : IColorSpace
+    {
+		double L { get; set; }
+		double U { get; set; }
+		double V { get; set; }
+    }
+
+    public class Luv : ColorSpace, ILuv
+    {
+		public double L { get; set; }
+		public double U { get; set; }
+		public double V { get; set; }
+
+        public override void Initialize(IRgb color)
+        {
+            LuvConverter.ToColorSpace(color,this);
+        }
+
+        public override IRgb ToRgb()
+        {
+            return LuvConverter.ToColor(this);
+        }
+    }
+
 	public interface IYxy : IColorSpace
     {
 		double Y1 { get; set; }
