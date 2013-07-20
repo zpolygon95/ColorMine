@@ -4,6 +4,26 @@ namespace ColorMine.ColorSpaces.Conversions
 {
     internal static class XyzConverter
     {
+        #region Constants/Helper methods for Xyz related spaces
+        internal static IXyz WhiteReference { get; private set; } // TODO: Hard-coded!
+        internal const double Epsilon = 0.008856; // Intent is 216/24389
+        internal const double Kappa = 903.3; // Intent is 24389/27
+        static XyzConverter()
+        {
+            WhiteReference = new Xyz
+            {
+                X = 95.047,
+                Y = 100.000,
+                Z = 108.883
+            };
+        }
+
+        internal static double CubicRoot(double n)
+        {
+            return Math.Pow(n, (1.0 / 3.0));
+        }
+        #endregion
+
         internal static void ToColorSpace(IRgb color, IXyz item)
         {
             var r = PivotRgb(color.R / 255.0);

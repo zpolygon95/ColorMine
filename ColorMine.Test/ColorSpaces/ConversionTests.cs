@@ -84,6 +84,15 @@ namespace ColorMine.Test.ColorSpaces
             }
 			
 			[TestMethod]
+            public void WhiteRgbToLuv()
+            {
+				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
+				var expectedColor = new Luv { L = 100, U = .00089, V = -.017, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
             public void BlackRgbToCmy()
             {
 				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
@@ -156,6 +165,15 @@ namespace ColorMine.Test.ColorSpaces
             }
 			
 			[TestMethod]
+            public void BlackRgbToLuv()
+            {
+				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
+				var expectedColor = new Luv { L = 0, U = 0, V = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
             public void GoldenrodRgbToCmy()
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
@@ -223,6 +241,15 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
 				var expectedColor = new Yxy { Y1 = 41.920, X = .46457, Y2 = .45684, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void GoldenrodRgbToLuv()
+            {
+				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
+				var expectedColor = new Luv { L = 70.816, U = 44.368, V = 69.994, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -303,6 +330,15 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Cmy { C = .72549, M = .49020, Y = .29412, };
 				var expectedColor = new Yxy { Y1 = 20.562, X = .21934, Y2 = .24058, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SteelBlueCmyToLuv()
+            {
+				var knownColor = new Cmy { C = .72549, M = .49020, Y = .29412, };
+				var expectedColor = new Luv { L = 52.467, U = -25.107, V = -48.374, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -703,6 +739,95 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
 				var expectedColor = new Yxy { Y1 = 15.372, X = .31493, Y2 = .36892, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+        }
+	}
+	public class LuvTest
+    {
+		[TestClass]
+        public class To : ColorSpaceTest
+        {
+			
+			[TestMethod]
+            public void SilverLuvToCmy()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Cmy { C = .24706, M = .24704, Y = .24706, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToCmyk()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Cmyk { C = .0000148, M = .000, Y = .0000186, K = .24704, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToHsl()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Hsl { H = 60, S = 0.7874, L = 75.098, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToLab()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Lab { L = 77.704, A = .0026, B = -.00696, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToLch()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Lch { L = 77.704, C = .0074, H = 290.49463, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToRgb()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Rgb { R = 192, G = 192, B = 192, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToXyz()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Xyz { X = 50.102, Y = 52.711, Z = 57.402, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToYxy()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Yxy { Y1 = 52.711, X = .31272, Y2 = .32900, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void SilverLuvToLuv()
+            {
+				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
+				var expectedColor = new Luv { L = 77.704, U = .001, V = -.013, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
