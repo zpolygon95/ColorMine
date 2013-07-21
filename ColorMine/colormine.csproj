@@ -48,7 +48,6 @@
     </Compile>
     <Compile Include="ColorSpaces\Comparisons\Cie1976Comparison.cs" />
     <Compile Include="ColorSpaces\Comparisons\CmcComparison.cs" />
-    <Compile Include="ColorSpaces\Comparisons\IDeltaEComparison.cs" />
     <Compile Include="ColorSpaces\Comparisons\IColorSpaceComparison.cs" />
     <Compile Include="ColorSpaces\Conversions\CmyConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\CmykConverter.cs" />
@@ -57,7 +56,7 @@
     <Compile Include="ColorSpaces\Conversions\LchConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\LuvConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\YxyConverter.cs" />
-    <Compile Include="Utility\DoubleExtension.cs" />
+    <Compile Include="ColorSpaces\Conversions\Utility\DoubleExtension.cs" />
     <Compile Include="ColorSpaces\Conversions\LabConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\RgbConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\XyzConverter.cs" />

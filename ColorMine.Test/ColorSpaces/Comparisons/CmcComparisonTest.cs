@@ -1,7 +1,7 @@
 ﻿using ColorMine.ColorSpaces;
 using ColorMine.ColorSpaces.Comparisons;
+using ColorMine.ColorSpaces.Conversions.Utility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ColorMine.Utility;
 
 namespace ColorMine.Test.ColorSpaces.Comparisons
 {

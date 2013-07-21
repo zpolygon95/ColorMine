@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-using ColorMine.Utility;
+using ColorMine.ColorSpaces.Conversions.Utility;
 
 namespace ColorMine.ColorSpaces.Conversions
 {

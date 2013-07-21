@@ -2,8 +2,14 @@
 
 namespace ColorMine.ColorSpaces.Comparisons
 {
-    public class Cie1976Comparison : IDeltaEComparison
+    /// <summary>
+    /// Implements the CIE76 method of delta-e: http://en.wikipedia.org/wiki/Color_difference#CIE76
+    /// </summary>
+    public class Cie1976Comparison : IColorSpaceComparison
     {
+        /// <summary>
+        /// Calculates the CIE76 delta-e value: http://en.wikipedia.org/wiki/Color_difference#CIE76
+        /// </summary>
         public double Compare(IColorSpace colorA, IColorSpace colorB)
         {
             var a = colorA.To<Lab>();
