@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ColorMine.Utility;
+﻿using ColorMine.ColorSpaces.Conversions.Utility;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ColorMine.Test.Utility
 {

@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using ColorMine.Utility;
-
-// dependent on Cmy
+﻿using ColorMine.ColorSpaces.Conversions.Utility;
 
 namespace ColorMine.ColorSpaces.Conversions
 {
