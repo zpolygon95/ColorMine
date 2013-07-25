@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ColorSpaceTest.tt</DependentUpon>
     </Compile>
+    <Compile Include="ColorSpaces\Comparisons\Cie94ComparisonTest.cs" />
     <Compile Include="ColorSpaces\Comparisons\CmcComparisonTest.cs" />
     <Compile Include="ColorSpaces\ConversionTests.cs">
       <AutoGen>True</AutoGen>
@@ -80,7 +81,6 @@
     <Content Include="ColorSpaces\ConversionResults.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Lib\Moq.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -95,6 +95,7 @@
       <LastGenOutput>ConversionTests.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
