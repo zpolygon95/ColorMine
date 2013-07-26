@@ -40,5 +40,6 @@ double deltaE = myRgb.Compare(myCmy,new CmcComparison(lightness: 2, chroma: 1));
 ## Currently Supported Comparisons
 * CIE76
 * CMC l:c
+* CIE94
 
 Note: Comparisons support all color spaces
