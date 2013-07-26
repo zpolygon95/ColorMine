@@ -36,7 +36,7 @@ namespace ColorMine.Test.ColorSpaces.Comparisons
                     B = -5.34
                 };
 
-                ReturnsExpectedValueForKnownInput(3.41, Cie94Comparison.Application.GraphicArts, a, b);
+                ReturnsExpectedValueForKnownInput(3.408967, Cie94Comparison.Application.GraphicArts, a, b);
             }
         }
     }

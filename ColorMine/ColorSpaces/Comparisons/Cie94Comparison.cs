@@ -42,30 +42,38 @@ namespace ColorMine.ColorSpaces.Comparisons
         /// <returns></returns>
         public double Compare(IColorSpace a, IColorSpace b)
         {
-            var lchA = a.To<Lch>();
-            var lchB = b.To<Lch>();
+            var labA = a.To<Lab>();
+            var labB = b.To<Lab>();
 
-            var deltaL = lchA.L - lchB.L;
-            var deltaC = lchA.C - lchB.C;
-            var deltaH = lchA.H - lchB.H;
+            var deltaL = labA.L - labB.L;
+            var deltaA = labA.A - labB.A;
+            var deltaB = labA.B - labB.B;
 
-            var cx = lchA.C;
+            var c1 = Math.Sqrt(Math.Pow(labA.A, 2) + Math.Pow(labA.B, 2));
+            var c2 = Math.Sqrt(Math.Pow(labB.A, 2) + Math.Pow(labB.B, 2));
+            var deltaC = c1 - c2;
+
+            var deltaH = Math.Pow(deltaA,2) + Math.Pow(deltaB,2) - Math.Pow(deltaC,2);
+            deltaH = deltaH < 0 ? 0 : Math.Sqrt(deltaH);
+
             const double sl = 1.0;
-            var sc = 1 + .045*cx;
-            var sh = 1 + .015*cx;
+            const double kc = 1.0;
+            const double kh = 1.0;
 
-            return Math.Sqrt(
-                Math.Pow(deltaL/(Constants.Kl*sl), 2) +
-                Math.Pow(deltaC/(Constants.Kc*sc), 2) +
-                Math.Pow(deltaH/(Constants.Kh*sh), 2)
-                );
+            var sc = 1.0 + Constants.K1*c1;
+            var sh = 1.0 + Constants.K2*c1;
+
+            var i = Math.Pow(deltaL/(Constants.Kl*sl), 2) +
+                    Math.Pow(deltaC/(kc*sc), 2) +
+                    Math.Pow(deltaH/(kh*sh), 2);
+            return i < 0 ? 0 : Math.Sqrt(i);
         }
 
         private class ApplicationConstants
         {
             internal double Kl { get; private set; }
-            internal double Kc { get; private set; }
-            internal double Kh { get; private set; }
+            internal double K1 { get; private set; }
+            internal double K2 { get; private set; }
 
             public ApplicationConstants(Application application)
             {
@@ -73,13 +81,13 @@ namespace ColorMine.ColorSpaces.Comparisons
                 {
                     case Application.GraphicArts:
                         Kl = 1.0;
-                        Kc = .045;
-                        Kh = .015;
+                        K1 = .045;
+                        K2 = .015;
                         break;
                     case Application.Textiles:
                         Kl = 2.0;
-                        Kc = .048;
-                        Kh = .014;
+                        K1 = .048;
+                        K2 = .014;
                         break;
                     default:
                         throw new ArgumentException("Application type not supported");
