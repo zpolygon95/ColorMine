@@ -10,13 +10,13 @@ namespace ColorMine.ColorSpaces.Conversions
             var xyz = color.To<Xyz>();
 
             item.L = 10.0 * Math.Sqrt(xyz.Y);
-            item.A = 17.5 * (((1.02 * xyz.X) - xyz.Y) / Math.Sqrt(xyz.Y));
-            item.B = 7.0 * ((xyz.Y - (.847 * xyz.Z)) / Math.Sqrt(xyz.Y));
+            item.A = xyz.Y != 0 ? 17.5 * (((1.02 * xyz.X) - xyz.Y) / Math.Sqrt(xyz.Y)) : 0;
+            item.B = xyz.Y != 0 ? 7.0 * ((xyz.Y - (.847 * xyz.Z)) / Math.Sqrt(xyz.Y)) : 0;
         }
 
         internal static IRgb ToColor(IHunterLab item)
         {
-            var x = item.A / 17.5 * item.L / 10.0;
+            var x = (item.A / 17.5) * (item.L / 10.0);
             var y = Math.Pow(item.L/10.0,2);
             var z = item.B/7.0*item.L/10.0;
 

@@ -111,6 +111,15 @@ namespace ColorMine.Test.ColorSpaces
             }
 			
 			[TestMethod]
+            public void WhiteRgbToHunterLab()
+            {
+				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
+				var expectedColor = new HunterLab { L = 100, A = -5.336, B = 5.433, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
             public void BlackRgbToCmy()
             {
 				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
@@ -210,6 +219,15 @@ namespace ColorMine.Test.ColorSpaces
             }
 			
 			[TestMethod]
+            public void BlackRgbToHunterLab()
+            {
+				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
+				var expectedColor = new HunterLab { L = 0, A = 0, B = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
             public void GoldenrodRgbToCmy()
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
@@ -304,6 +322,15 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
 				var expectedColor = new Hsv { H = 42.903, S = .85, V = .85, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void GoldenrodRgbToHunterLab()
+            {
+				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
+				var expectedColor = new HunterLab { L = 64.746, A = 4.222, B = 38.719, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -1034,6 +1061,32 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
 				var expectedColor = new Luv { L = 92.036, U = -55.917, V = 21.99756, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+        }
+	}
+	public class HunterLabTest
+    {
+		[TestClass]
+        public class To : ColorSpaceTest
+        {
+			
+			[TestMethod]
+            public void BabyBlueHunterLabToRgb()
+            {
+				var knownColor = new HunterLab { L = 85.308, A = -27.915, B = -13.675, };
+				var expectedColor = new Rgb { R = 133, G = 237, B = 255, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void BabyBlueHunterLabToXyz()
+            {
+				var knownColor = new HunterLab { L = 85.308, A = -27.915, B = -13.675, };
+				var expectedColor = new Xyz { X = 58.007, Y = 72.775, Z = 105.596, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
