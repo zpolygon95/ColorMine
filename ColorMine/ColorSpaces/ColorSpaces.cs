@@ -245,4 +245,28 @@ namespace ColorMine.ColorSpaces
         }
     }
 
+	public interface IHunterLab : IColorSpace
+    {
+		double L { get; set; }
+		double A { get; set; }
+		double B { get; set; }
+    }
+
+    public class HunterLab : ColorSpace, IHunterLab
+    {
+		public double L { get; set; }
+		public double A { get; set; }
+		public double B { get; set; }
+
+        public override void Initialize(IRgb color)
+        {
+            HunterLabConverter.ToColorSpace(color,this);
+        }
+
+        public override IRgb ToRgb()
+        {
+            return HunterLabConverter.ToColor(this);
+        }
+    }
+
 }
