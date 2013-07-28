@@ -56,8 +56,10 @@ Note: Delta-e calculations are [quasimetric](http://en.wikipedia.org/wiki/Quasim
 * CMY
 * CMYK
 * HSL
+* HSB
 * HSV
-* LAB
+* CIE L*AB
+* Hunter LAB
 * LCH
 * LUV
 * RGB
