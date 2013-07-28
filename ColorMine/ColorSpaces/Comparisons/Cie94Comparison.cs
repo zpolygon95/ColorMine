@@ -16,6 +16,9 @@ namespace ColorMine.ColorSpaces.Comparisons
             Textiles
         }
 
+
+        internal ApplicationConstants Constants { get; private set; }
+
         /// <summary>
         /// Create new Cie94Comparison. Defaults to GraphicArts application type.
         /// </summary>
@@ -24,7 +27,6 @@ namespace ColorMine.ColorSpaces.Comparisons
             Constants = new ApplicationConstants(Application.GraphicArts);
         }
 
-        private ApplicationConstants Constants { get; set; }
         /// <summary>
         /// Create new Cie94Comparison for specific application type.
         /// </summary>
@@ -69,7 +71,7 @@ namespace ColorMine.ColorSpaces.Comparisons
             return i < 0 ? 0 : Math.Sqrt(i);
         }
 
-        private class ApplicationConstants
+        internal class ApplicationConstants
         {
             internal double Kl { get; private set; }
             internal double K1 { get; private set; }
@@ -89,8 +91,6 @@ namespace ColorMine.ColorSpaces.Comparisons
                         K1 = .048;
                         K2 = .014;
                         break;
-                    default:
-                        throw new ArgumentException("Application type not supported");
                 }
             }
         }
