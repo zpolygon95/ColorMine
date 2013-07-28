@@ -54,6 +54,7 @@
     <Compile Include="ColorSpaces\Conversions\CmykConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HsvConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HslConverter.cs" />
+    <Compile Include="ColorSpaces\Conversions\HunterLabConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\LchConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\LuvConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\YxyConverter.cs" />
