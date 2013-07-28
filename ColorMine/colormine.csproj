@@ -52,6 +52,7 @@
     <Compile Include="ColorSpaces\Comparisons\IColorSpaceComparison.cs" />
     <Compile Include="ColorSpaces\Conversions\CmyConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\CmykConverter.cs" />
+    <Compile Include="ColorSpaces\Conversions\HsbConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HsvConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HslConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HunterLabConverter.cs" />

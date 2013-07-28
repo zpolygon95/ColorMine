@@ -245,6 +245,30 @@ namespace ColorMine.ColorSpaces
         }
     }
 
+	public interface IHsb : IColorSpace
+    {
+		double H { get; set; }
+		double S { get; set; }
+		double B { get; set; }
+    }
+
+    public class Hsb : ColorSpace, IHsb
+    {
+		public double H { get; set; }
+		public double S { get; set; }
+		public double B { get; set; }
+
+        public override void Initialize(IRgb color)
+        {
+            HsbConverter.ToColorSpace(color,this);
+        }
+
+        public override IRgb ToRgb()
+        {
+            return HsbConverter.ToColor(this);
+        }
+    }
+
 	public interface IHunterLab : IColorSpace
     {
 		double L { get; set; }
