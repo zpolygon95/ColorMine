@@ -71,6 +71,13 @@
       <dataPoint label="V" min="0" max="1"/>
     </dataPoints>
   </colorSpace>
+  <colorSpace name="Hsb">
+    <dataPoints>
+      <dataPoint label="H" min="0" max="360"/>
+      <dataPoint label="S" min="0" max="1"/>
+      <dataPoint label="B" min="0" max="1"/>
+    </dataPoints>
+  </colorSpace>
   <colorSpace name="HunterLab">
     <dataPoints>
       <dataPoint label="L"/>
