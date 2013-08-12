@@ -48,6 +48,7 @@
     </Compile>
     <Compile Include="ColorSpaces\Comparisons\Cie1976Comparison.cs" />
     <Compile Include="ColorSpaces\Comparisons\Cie94Comparison.cs" />
+    <Compile Include="ColorSpaces\Comparisons\CieDe2000.cs" />
     <Compile Include="ColorSpaces\Comparisons\CmcComparison.cs" />
     <Compile Include="ColorSpaces\Comparisons\IColorSpaceComparison.cs" />
     <Compile Include="ColorSpaces\Conversions\CmyConverter.cs" />
