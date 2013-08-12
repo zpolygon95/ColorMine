@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="766d6e03-eae3-43a1-af41-39fcf11fa1ae" Title="ColorMine.ColorSpaces Namespace" Url="html/a5b3d747-1955-dd6b-54e8-5a298b6202fb.htm">
+    <HelpTOCNode Id="c3c51454-c748-4438-959d-637e467a71ec" Title="Cmy Class" Url="html/85ba5748-93a6-887b-fceb-f15ae6271e57.htm">
+      <HelpTOCNode Title="Cmy Members" Url="html/86ec007d-a15a-d638-359a-9fd15bdb297d.htm" />
+      <HelpTOCNode Title="Cmy Constructor " Url="html/107f3687-0360-5b2c-ca0f-e0dbdaad7b7f.htm" />
+      <HelpTOCNode Id="8509a86b-94be-4883-af26-b637fa411f85" Title="Cmy Methods" Url="html/80793053-db23-4ca7-e706-4e2c3b2a3fb0.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/9705660c-5234-97d5-1b76-89da6c4d100f.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/c9fadd1f-2f76-049e-0631-a791aa862b80.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0e4abdbe-26ed-4ef7-bb53-65c89276135a" Title="Cmy Properties" Url="html/9b077aba-dc61-2526-1f28-eaaa9e69c4e2.htm">
+        <HelpTOCNode Title="C Property " Url="html/30ee4a99-e096-faf0-cf1c-de51d02a1830.htm" />
+        <HelpTOCNode Title="M Property " Url="html/36508f4f-4117-dbc0-7920-73463b658faa.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/84c4aacc-5255-c84f-05a1-0c5186655c96.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="45562fc0-d54b-4d8a-94c7-3aa14872f970" Title="Cmyk Class" Url="html/2fb6fb68-695e-42cf-6e99-33cfd2545801.htm">
+      <HelpTOCNode Title="Cmyk Members" Url="html/6b3185b1-dd69-3d4c-4446-f57767d7fcdb.htm" />
+      <HelpTOCNode Title="Cmyk Constructor " Url="html/da7525b1-fff9-81bc-15c8-a8fcd9b8de5b.htm" />
+      <HelpTOCNode Id="b14b3504-730f-4984-a0d8-06b05859ab4d" Title="Cmyk Methods" Url="html/91e40ca3-f7bf-40c3-d539-286bd226801f.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/d4ade412-ac41-853d-73f2-183d968300bf.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/e0ad8f4d-e20c-e847-d386-0ffcb5cc7c0a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="29fdc21e-5fa8-4f6e-802a-cb13c35771c5" Title="Cmyk Properties" Url="html/1168f7b9-d451-9bcd-c972-cab752d713dd.htm">
+        <HelpTOCNode Title="C Property " Url="html/cf389226-356c-25e4-1717-ca7c96deb56a.htm" />
+        <HelpTOCNode Title="K Property " Url="html/e187ae23-b8c1-bc0c-7f55-45679ed69612.htm" />
+        <HelpTOCNode Title="M Property " Url="html/4b706deb-d8e9-411b-19a7-83bfc260e3cf.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/3012d686-78a3-deb0-0a03-12e2cbf54188.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="df0e83a9-415c-4c17-984c-63fac9f8a585" Title="ColorSpace Class" Url="html/a9f666ad-4d93-cfe3-c76c-c3640e3f9af8.htm">
+      <HelpTOCNode Title="ColorSpace Members" Url="html/fa7d9ca1-60f7-914b-b13c-8846a3c99525.htm" />
+      <HelpTOCNode Title="ColorSpace Constructor " Url="html/8df5f30c-61a8-38f2-5451-850ea5899e0e.htm" />
+      <HelpTOCNode Id="5949433f-2074-46f8-9831-49ea93b85ca3" Title="ColorSpace Methods" Url="html/898fdb24-6d03-47f8-6c36-1220ecedd6b3.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/95336193-e1ad-73e4-9ea1-11cd3da5b8f4.htm" />
+        <HelpTOCNode Title="Initialize Method " Url="html/1f2a1d4d-9729-5a91-0b48-0688cc239aa7.htm" />
+        <HelpTOCNode Title="To(T) Method " Url="html/d848fee3-84dc-91f0-7b2f-632cdf9cb973.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/14bdc0ca-37af-05a5-6c58-ef8aba3282a4.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ComparisonAlgorithm Delegate" Url="html/5d327ac3-255d-e800-0e85-a4dce15c9662.htm" />
+    <HelpTOCNode Id="03dfc9de-edfa-485d-80d2-2b7de8655190" Title="Hsb Class" Url="html/534bddb8-e8a4-b8dc-363c-bb7bcce3a3f5.htm">
+      <HelpTOCNode Title="Hsb Members" Url="html/5fb37814-61d4-824e-1c71-71943a9c499c.htm" />
+      <HelpTOCNode Title="Hsb Constructor " Url="html/3260a8f9-daef-d98c-ec32-ba164de8faa0.htm" />
+      <HelpTOCNode Id="a3dfcd0e-e4de-46e3-8645-b4eab3602e7d" Title="Hsb Methods" Url="html/a12a1f72-e4d4-fff1-992a-ffcaaf84036d.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/e2125716-f2e8-f23f-b15b-69a0934df3f0.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/424a067c-35a8-8e07-deac-6ff3471c0d19.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3b98e85f-f7a2-49fc-9b21-372a0aa6dd1a" Title="Hsb Properties" Url="html/77a97d10-87ae-0b04-b963-5b5cb203d8e6.htm">
+        <HelpTOCNode Title="B Property " Url="html/85df457f-6d9e-1908-c75c-b2e66518d3a3.htm" />
+        <HelpTOCNode Title="H Property " Url="html/47e215ae-ed64-4795-e36b-fee3754292c7.htm" />
+        <HelpTOCNode Title="S Property " Url="html/a8522fd9-cef9-0074-ab83-f574b4930572.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8754f692-bf83-4b3e-8d95-750614e9d53f" Title="Hsl Class" Url="html/f5012e9f-28e1-d908-1c87-7a5b5a2f8633.htm">
+      <HelpTOCNode Title="Hsl Members" Url="html/1eecf806-bc95-aac8-a3a7-d14edf345aa3.htm" />
+      <HelpTOCNode Title="Hsl Constructor " Url="html/ea7ba046-3984-4fc2-5d09-9c15afa05c11.htm" />
+      <HelpTOCNode Id="d5bed846-af46-482b-b644-cc17dfa47dad" Title="Hsl Methods" Url="html/30337854-adb7-2e79-e0b4-08517ba7a515.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/9e32e3f1-632b-6ce9-9702-a9677851bf10.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/172704bd-65af-c788-fc89-d3c28fbdc793.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="bf240188-b638-4908-b47f-c6fc8f243272" Title="Hsl Properties" Url="html/b83d2d6e-234e-4408-58a6-430c881845e0.htm">
+        <HelpTOCNode Title="H Property " Url="html/8cd08362-92fd-5f42-e9d2-3dfb6b1f9b19.htm" />
+        <HelpTOCNode Title="L Property " Url="html/bdcd3be0-afdd-791b-57fa-d5163e9f4363.htm" />
+        <HelpTOCNode Title="S Property " Url="html/00097c5f-9d33-26b2-367f-653531eb7996.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="499df9c1-d5da-49b7-85e4-5e5803016fb8" Title="Hsv Class" Url="html/630d43b6-1d43-abad-f8a1-4392bdc01d5c.htm">
+      <HelpTOCNode Title="Hsv Members" Url="html/2b336fde-172b-acd5-2bf0-2bda32224c49.htm" />
+      <HelpTOCNode Title="Hsv Constructor " Url="html/25bb7eae-bfb3-73ad-772b-fcba711ee13d.htm" />
+      <HelpTOCNode Id="f34df65e-f19e-47cd-9fdf-ae554221232c" Title="Hsv Methods" Url="html/70130e52-0980-7dae-512e-faeee4408f83.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/f7941bdb-521a-1cfa-aa7c-4c0b7ec92f16.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/713c0d2b-39fd-4605-4bac-c2a969dcfaa1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="24cb8a90-5bf3-45de-b6ab-15b70ac94d5b" Title="Hsv Properties" Url="html/c966f62d-105c-a55a-6899-27cc6f1cb9a5.htm">
+        <HelpTOCNode Title="H Property " Url="html/e04b6836-71c0-32db-fa0c-c6fced9deaa0.htm" />
+        <HelpTOCNode Title="S Property " Url="html/d9fbdaec-deb2-7228-d880-df781802f373.htm" />
+        <HelpTOCNode Title="V Property " Url="html/5084e16c-22ec-b08f-4c85-1e13da44c311.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fedf0aa2-57da-493d-a37b-762ff25a2b1c" Title="HunterLab Class" Url="html/beac72e6-2e85-db81-42cf-e60992fdb63a.htm">
+      <HelpTOCNode Title="HunterLab Members" Url="html/45ed0cb1-774b-a9e1-e6a2-1c2cb5d3c55a.htm" />
+      <HelpTOCNode Title="HunterLab Constructor " Url="html/7bfbf516-87c0-0df9-51bc-ff0af735a782.htm" />
+      <HelpTOCNode Id="caaef7be-239d-485e-a87f-337cafd03c63" Title="HunterLab Methods" Url="html/8e96ee18-c596-c88f-7d58-e2f2327bb6aa.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/141082bb-8897-8085-3418-1c60a21442dc.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/7aa85b3c-2a53-0249-9e55-cf5a13e3dfb0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="934369d3-599a-45bb-860d-c0f3ae634d26" Title="HunterLab Properties" Url="html/2c1dd9b0-3c33-87ad-7b68-6f46b56a534c.htm">
+        <HelpTOCNode Title="A Property " Url="html/339b8f92-0e11-ae5a-152c-b67a882c1f5a.htm" />
+        <HelpTOCNode Title="B Property " Url="html/ad853b7b-9fb8-561b-a908-c18b27ed1290.htm" />
+        <HelpTOCNode Title="L Property " Url="html/5401a51b-70c3-4311-fb21-03a7e8d84533.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="26f39d33-e227-457b-b26a-65424d654d50" Title="ICmy Interface" Url="html/e5506770-76a6-f12a-2cf1-e8b9025f8eb9.htm">
+      <HelpTOCNode Title="ICmy Members" Url="html/ae842d80-157b-0de7-9212-b803963b1dbe.htm" />
+      <HelpTOCNode Title="ICmy Methods" Url="html/1cd1a3fd-451c-920b-c7da-5bdade0cf094.htm" />
+      <HelpTOCNode Id="aa2f9cf7-3bfc-4366-b0b0-cbcb5548daaa" Title="ICmy Properties" Url="html/bb92fa8b-7499-9f93-ae86-a0460ffa360d.htm">
+        <HelpTOCNode Title="C Property " Url="html/97ad0426-8b41-0b91-6ce0-3c06d2a3b5dd.htm" />
+        <HelpTOCNode Title="M Property " Url="html/5878c44b-5ad2-2921-ef55-5fa9f760a2c8.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/7a32b17b-0bd5-915a-d59f-dbdff5983e5b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="85e3484a-f3ce-4da9-a258-ce2ac3acf118" Title="ICmyk Interface" Url="html/fd37ff09-4915-7761-d742-13b509ac973d.htm">
+      <HelpTOCNode Title="ICmyk Members" Url="html/553a8f34-7b72-f1a4-bd25-6482e438bbc3.htm" />
+      <HelpTOCNode Title="ICmyk Methods" Url="html/d9787767-f1ca-c8cb-bb46-8c86c060594d.htm" />
+      <HelpTOCNode Id="2e66081c-7a17-48f3-b454-f249568fb4cb" Title="ICmyk Properties" Url="html/b35a463f-30ff-9951-fe88-26e6e2a9de00.htm">
+        <HelpTOCNode Title="C Property " Url="html/c9700eb6-3717-d7c1-e298-947903ee1205.htm" />
+        <HelpTOCNode Title="K Property " Url="html/f7b1ea22-c6bc-f69b-4245-6860ea9f4c28.htm" />
+        <HelpTOCNode Title="M Property " Url="html/15a83129-0854-bce7-257c-f5fc72e66067.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/233d32e4-b3fc-3f89-0035-4195190dc8be.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0af27256-1076-4788-8f16-0b3079b4cbf9" Title="IColorSpace Interface" Url="html/42b436ff-d05a-8cfb-8e5a-5d9a25f985cb.htm">
+      <HelpTOCNode Title="IColorSpace Members" Url="html/8bf4f799-0f21-ab2c-9d28-ae544850ca8b.htm" />
+      <HelpTOCNode Id="e6ddf6ea-3553-48b7-a3d9-0c616cc2bcea" Title="IColorSpace Methods" Url="html/9a8ecc7c-8d97-d603-f2ee-b43b739ed715.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/3dc0d985-ff3b-90f4-9e5a-cde5856c6f76.htm" />
+        <HelpTOCNode Title="Initialize Method " Url="html/31b0b854-3955-193c-4c18-e377ce2588fa.htm" />
+        <HelpTOCNode Title="To(T) Method " Url="html/755808cd-fb6f-b838-b30c-30a33c4cd922.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/c9115fc9-507e-4b30-e91d-ea605841dabc.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2a77700f-0086-45c4-b61d-3683fd692c16" Title="IHsb Interface" Url="html/5f95506c-ffaf-63ad-116f-9021a09ead21.htm">
+      <HelpTOCNode Title="IHsb Members" Url="html/9ff657b9-c6c0-8fd3-4909-f1875f932b0b.htm" />
+      <HelpTOCNode Title="IHsb Methods" Url="html/67c01e17-5cc9-80f1-c613-45f43792e044.htm" />
+      <HelpTOCNode Id="c40c9ba7-a2c9-4593-982e-19b12d639f5e" Title="IHsb Properties" Url="html/4c86226e-e831-8f3e-3270-e229b63132c6.htm">
+        <HelpTOCNode Title="B Property " Url="html/e837a001-e942-efd0-41a4-1f6bd7427bc8.htm" />
+        <HelpTOCNode Title="H Property " Url="html/9a08b4ee-ce9b-e7c8-786e-cfcec9cfb42b.htm" />
+        <HelpTOCNode Title="S Property " Url="html/5f75c508-449c-d0d9-9fe1-e9de4d94ea2f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e25ee148-3c94-4f9b-8e32-11ab05cb2fb3" Title="IHsl Interface" Url="html/d8fdfea6-f256-80e8-9a6a-ff1509c0f141.htm">
+      <HelpTOCNode Title="IHsl Members" Url="html/42c3f943-b238-a361-3846-24c289ee108b.htm" />
+      <HelpTOCNode Title="IHsl Methods" Url="html/1bf9ea72-95f8-b258-e42b-5e8ae08c518d.htm" />
+      <HelpTOCNode Id="d882c96a-a554-481d-ae4b-03d617e4b8de" Title="IHsl Properties" Url="html/f21b13b0-b3b1-ffc8-0ea5-45edefa9d2c5.htm">
+        <HelpTOCNode Title="H Property " Url="html/3d3c83c4-23fe-3d82-ab09-3a64ba2b819c.htm" />
+        <HelpTOCNode Title="L Property " Url="html/e0d9a4f0-ac66-85a6-c400-bd8261cf7b25.htm" />
+        <HelpTOCNode Title="S Property " Url="html/0bd82f06-c3c0-c0ad-6062-b9815818b5d9.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4c7a3047-1be0-43d6-94eb-3508110c1f59" Title="IHsv Interface" Url="html/c37c9d64-38d5-cf63-5069-efa9a308b8f0.htm">
+      <HelpTOCNode Title="IHsv Members" Url="html/f8035578-4bd4-eee0-caad-b89db4751a60.htm" />
+      <HelpTOCNode Title="IHsv Methods" Url="html/4ff7f02a-3148-b8ff-dce9-921187524c74.htm" />
+      <HelpTOCNode Id="99702fdb-0077-4943-a679-97692f28d6a9" Title="IHsv Properties" Url="html/4bb9c385-b5a7-022a-39f4-5887b8b65c7b.htm">
+        <HelpTOCNode Title="H Property " Url="html/198f2b9f-e607-3a81-0d81-37e00dfaf8e1.htm" />
+        <HelpTOCNode Title="S Property " Url="html/d0413e6e-7264-1090-5ee1-c25e3e1ca61e.htm" />
+        <HelpTOCNode Title="V Property " Url="html/a99722ab-7b8a-b3c8-d984-a9ec5e0c73b0.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="282e505a-50de-4761-8700-1f939813a2da" Title="IHunterLab Interface" Url="html/4eebc84e-66da-efde-2306-1fd6bb2908ed.htm">
+      <HelpTOCNode Title="IHunterLab Members" Url="html/36168199-b452-f048-599e-189c7c850d69.htm" />
+      <HelpTOCNode Title="IHunterLab Methods" Url="html/7dc0a5cc-0746-c7d7-f591-f432775a10f0.htm" />
+      <HelpTOCNode Id="5bac7129-3837-49ae-8bcc-a6ea78e296eb" Title="IHunterLab Properties" Url="html/9113d355-32ba-0f83-e7df-29eb26bb9b2e.htm">
+        <HelpTOCNode Title="A Property " Url="html/882c87ec-7e93-cef9-4bb0-f23a0a81c469.htm" />
+        <HelpTOCNode Title="B Property " Url="html/edd0fe70-8cf0-b915-6327-d06a617069b0.htm" />
+        <HelpTOCNode Title="L Property " Url="html/33d80bf4-6fc8-ee4d-feeb-054eaa93fdf0.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="74a4b1ce-765e-446b-b0f0-40d30886651d" Title="ILab Interface" Url="html/f9b9e0fc-77bc-aa9b-0917-7cc9da62f6d7.htm">
+      <HelpTOCNode Title="ILab Members" Url="html/0601fbc9-7bb5-3938-4f98-3f30a71493ef.htm" />
+      <HelpTOCNode Title="ILab Methods" Url="html/12b7740c-0602-29e1-15a0-9798b2a7294f.htm" />
+      <HelpTOCNode Id="f76701d1-2de0-455c-b9d7-18b8f81d2fd0" Title="ILab Properties" Url="html/9b040974-cbb5-6a52-9902-228daf6813d1.htm">
+        <HelpTOCNode Title="A Property " Url="html/d35a0064-2214-183e-e4c4-d5b92a1f3a2f.htm" />
+        <HelpTOCNode Title="B Property " Url="html/f28d708a-7b4e-b866-19fe-de7327d471b5.htm" />
+        <HelpTOCNode Title="L Property " Url="html/5614ed9c-9c4b-0206-075d-b12c1586cd07.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c8f879f7-c1a5-4bc3-abf1-51bd6b9a9ee7" Title="ILch Interface" Url="html/627e6516-2424-d701-a7f7-96d0a99f0cf6.htm">
+      <HelpTOCNode Title="ILch Members" Url="html/f4ab9a19-8519-278f-1254-ec35db2e177b.htm" />
+      <HelpTOCNode Title="ILch Methods" Url="html/0e61b933-7b26-4d15-be74-ed2106217c07.htm" />
+      <HelpTOCNode Id="e6ce910d-93ca-43bc-b33f-e5051b524a96" Title="ILch Properties" Url="html/a47eab3e-4f5c-0f6f-e8ef-321119a0fe1e.htm">
+        <HelpTOCNode Title="C Property " Url="html/455cf591-29bb-0c1c-af70-f77e7deabae0.htm" />
+        <HelpTOCNode Title="H Property " Url="html/3c5987b3-9e25-6ac7-6b60-040e3680890f.htm" />
+        <HelpTOCNode Title="L Property " Url="html/b4cea9c8-00ff-ebbd-28a4-cbf89047418e.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b7d822cd-92e3-4ccb-8774-f80f13e6e76b" Title="ILuv Interface" Url="html/44452475-39a8-bd8a-6bf5-bf6accee54c1.htm">
+      <HelpTOCNode Title="ILuv Members" Url="html/2be19fab-b0b0-a4aa-fdb0-b13e36d1e718.htm" />
+      <HelpTOCNode Title="ILuv Methods" Url="html/eff47f88-6b50-9842-7254-56d5edc70bdb.htm" />
+      <HelpTOCNode Id="9e3858d6-9e50-4215-90a0-37c8908cb9b3" Title="ILuv Properties" Url="html/6ef2d0c4-e43d-092e-c0a5-812c1615a71e.htm">
+        <HelpTOCNode Title="L Property " Url="html/3f27e37e-529a-26c4-07dd-3e1173f1d521.htm" />
+        <HelpTOCNode Title="U Property " Url="html/83f91658-e892-2293-329d-88a54f1570fc.htm" />
+        <HelpTOCNode Title="V Property " Url="html/f639daca-161f-183f-2492-d2cbd6da8eaa.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="678c7860-180e-4110-a13d-dc68d979a80e" Title="IRgb Interface" Url="html/968acf76-959f-f7e0-79af-66dc4609e481.htm">
+      <HelpTOCNode Title="IRgb Members" Url="html/c2ba63a9-7805-d518-3f96-0dbadbbb5b46.htm" />
+      <HelpTOCNode Title="IRgb Methods" Url="html/b3fb48a6-a834-255f-e1b1-4fbb2205474d.htm" />
+      <HelpTOCNode Id="fad8b38d-7c89-4a2d-b158-e54dbdcfa1ca" Title="IRgb Properties" Url="html/457cbf0e-5a48-1e7e-2a81-6925218c93bd.htm">
+        <HelpTOCNode Title="B Property " Url="html/4303fe8f-2e03-d78f-a62f-302506d01077.htm" />
+        <HelpTOCNode Title="G Property " Url="html/a6f4592d-959f-4da7-0815-39ff569d8339.htm" />
+        <HelpTOCNode Title="R Property " Url="html/d57b4dc0-2e81-3005-c299-c6b8905ef152.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5a1af0f7-13e9-44ea-b303-81f2a773d93d" Title="IXyz Interface" Url="html/c21673ff-d02f-ca19-26a8-e2f3e646444d.htm">
+      <HelpTOCNode Title="IXyz Members" Url="html/6cace5d5-3286-6992-cfd7-b60e916068fa.htm" />
+      <HelpTOCNode Title="IXyz Methods" Url="html/39f6bc87-3e11-623f-3c02-0e7d67246a8d.htm" />
+      <HelpTOCNode Id="1399496d-2032-4254-9edf-6ab06d234376" Title="IXyz Properties" Url="html/d22ae6ba-637e-41c8-ddc1-0f371fc068f6.htm">
+        <HelpTOCNode Title="X Property " Url="html/0d92e60d-3190-f483-9ccc-b892438e26c7.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/3b4191a0-9f55-4086-a9cf-e8ee88c444f4.htm" />
+        <HelpTOCNode Title="Z Property " Url="html/c978787e-c19e-2650-7721-626c6f43fc99.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="786c895e-c915-4143-a125-fd73f7b72cfc" Title="IYxy Interface" Url="html/8743bc2a-b192-5ebc-0767-0dcce73d35e1.htm">
+      <HelpTOCNode Title="IYxy Members" Url="html/215d7f22-5c16-a3c0-df83-832b752f793d.htm" />
+      <HelpTOCNode Title="IYxy Methods" Url="html/3ec6e2f2-0321-9785-31a9-f870ed879b8c.htm" />
+      <HelpTOCNode Id="8b32eb39-28a4-4e4c-b1b9-87a2f0fb180a" Title="IYxy Properties" Url="html/e3096210-5ac8-6abc-8b24-ce6bd9e71c42.htm">
+        <HelpTOCNode Title="X Property " Url="html/eb291fb7-209c-f5b4-6a54-917947a2019b.htm" />
+        <HelpTOCNode Title="Y1 Property " Url="html/3c00b85f-e74b-b94e-ce81-949c4d66d7fa.htm" />
+        <HelpTOCNode Title="Y2 Property " Url="html/3b043a87-5192-c66a-7b54-b66a93a27cf3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9ee9bc40-8235-4321-98f9-073b2086a1cf" Title="Lab Class" Url="html/21180888-b2f5-9ed4-3bb9-fa5adbe11633.htm">
+      <HelpTOCNode Title="Lab Members" Url="html/77b7968d-dd1d-f71c-07e2-ffa5520bd78f.htm" />
+      <HelpTOCNode Title="Lab Constructor " Url="html/ad739b32-7e03-cfb3-5e92-e2a110bd7851.htm" />
+      <HelpTOCNode Id="154a2b6f-1529-4df9-9268-c781dff8106d" Title="Lab Methods" Url="html/2c7aa18c-02c1-0539-5c68-bfb9f379c999.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/4ef1223e-4ae8-1204-ebfb-bb695a33b8ea.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/6e1f577e-f8c0-6cc8-a447-8e3aa0ad6201.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d7d67ff4-9129-4871-9e8d-d973413c7b1d" Title="Lab Properties" Url="html/eef95d61-965f-80d7-7ac2-25a25f268fb8.htm">
+        <HelpTOCNode Title="A Property " Url="html/e11ba4a5-ca78-ce19-c610-72c43f28f424.htm" />
+        <HelpTOCNode Title="B Property " Url="html/6bf33028-1872-4f4d-9e27-1165810049a8.htm" />
+        <HelpTOCNode Title="L Property " Url="html/faa17916-0f91-fc44-eeec-8cee5b9f03d2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1c03adc5-83c2-4844-965f-5d6794244a4b" Title="Lch Class" Url="html/e1f7b2a4-8b61-e95a-f3c9-cd8cd4be2bc4.htm">
+      <HelpTOCNode Title="Lch Members" Url="html/0f342f19-6c7f-8eaf-71df-250507fb5c1f.htm" />
+      <HelpTOCNode Title="Lch Constructor " Url="html/9838206d-759d-b938-2cc1-7cfb92a2a9bb.htm" />
+      <HelpTOCNode Id="635a12ea-3e5a-4405-bc3d-f585d117c2ec" Title="Lch Methods" Url="html/25e84a9d-de8f-38dc-6583-bc1fdbae7dc8.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/32fc493e-2e75-57eb-8c2e-f8fcd2aaab59.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/8ddab615-0192-e547-ab95-a088949b7140.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="13f011f0-bfc7-40b1-bf04-f350aacff3d3" Title="Lch Properties" Url="html/5372fa63-7512-a755-81a6-e79acdff042c.htm">
+        <HelpTOCNode Title="C Property " Url="html/d9a3748e-8de8-0bb3-3d76-821e27661883.htm" />
+        <HelpTOCNode Title="H Property " Url="html/b2b82a0c-9cf5-ac3b-36d1-741aad524bac.htm" />
+        <HelpTOCNode Title="L Property " Url="html/d33153f1-d1f4-5183-851e-537285a55e3b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7ee8d1c3-5a22-4081-bd87-ffcaca49492f" Title="Luv Class" Url="html/52f8772e-ef6a-1207-db66-510de75f2528.htm">
+      <HelpTOCNode Title="Luv Members" Url="html/cbd446b4-636a-8ef9-e0e2-9abc0791b5bc.htm" />
+      <HelpTOCNode Title="Luv Constructor " Url="html/bb2d694d-506e-c1dc-dd09-df8b1545d2cb.htm" />
+      <HelpTOCNode Id="a9880851-50b8-49cb-956c-0e3c89df78a7" Title="Luv Methods" Url="html/4bcb7095-c61c-e8d9-d516-d04d748e3df3.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/ce4591a9-3133-bc6a-d56c-d0f6cc14d797.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/7cc856f8-b73c-480d-239b-fa843de9d34a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="aae8298d-8b9f-4a72-8eb6-9ce5a98a2f57" Title="Luv Properties" Url="html/61bb2251-d7bd-42ac-5e72-e791b6a893e8.htm">
+        <HelpTOCNode Title="L Property " Url="html/6c0382c4-dd02-5748-7af3-eefd1ba76d78.htm" />
+        <HelpTOCNode Title="U Property " Url="html/c92a57a0-e167-e1b3-7e97-3660379f617d.htm" />
+        <HelpTOCNode Title="V Property " Url="html/37c34da4-8e1b-67fd-6cba-c7f3855002ff.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="57540489-88aa-4019-9717-3386eaa9c596" Title="Rgb Class" Url="html/82eb261c-000f-1750-8969-256814e09ca5.htm">
+      <HelpTOCNode Title="Rgb Members" Url="html/a81cad7b-9b68-cd73-7133-d3882d60d2b4.htm" />
+      <HelpTOCNode Title="Rgb Constructor " Url="html/43e8ccd2-737e-2c09-1574-18663558fb22.htm" />
+      <HelpTOCNode Id="baf39f9b-d213-40d3-9041-f5a5a5efd309" Title="Rgb Methods" Url="html/f7dbefb0-c3b3-e46d-24c5-e8eb84816a79.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/53e049a9-33b1-9297-5d17-452f833ce661.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/bd78af69-1405-0142-2226-5784d7c0db76.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="00f50a16-4988-46e3-bb13-c5d52b8769e8" Title="Rgb Properties" Url="html/963ffb0b-2814-18cc-38ac-85a654118825.htm">
+        <HelpTOCNode Title="B Property " Url="html/7c50e01d-c8d1-5923-3849-f66c1bf215d0.htm" />
+        <HelpTOCNode Title="G Property " Url="html/563ac78f-a9ef-8ea4-506b-e6547799cc78.htm" />
+        <HelpTOCNode Title="R Property " Url="html/1669f8bb-d83f-ad9b-c190-373ef5cd19d3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8b8ccf4f-4ea9-4bde-96a2-8c8bcb12cd81" Title="Xyz Class" Url="html/ee2d6a2b-a5ff-6a29-fc71-e76a0478907d.htm">
+      <HelpTOCNode Title="Xyz Members" Url="html/2f539a4b-f998-c4b0-9a22-eb52486efc90.htm" />
+      <HelpTOCNode Title="Xyz Constructor " Url="html/f3c03232-a299-ba28-d934-bbddd1a678af.htm" />
+      <HelpTOCNode Id="dca69565-a106-47aa-9b36-b5efdd570c07" Title="Xyz Methods" Url="html/9a5f3067-ab0e-d6ef-ed5c-eae2d60782f2.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/930a9194-d930-6f12-88ec-a5633f15a9f9.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/f3dcc391-4ccc-e434-05df-0858b7362aa5.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a8895962-33fe-4b83-bfcf-c3b97504c149" Title="Xyz Properties" Url="html/878483a9-e40c-5d07-7871-3cf10a4c528a.htm">
+        <HelpTOCNode Title="X Property " Url="html/968f1cfa-b8d8-bb65-1d64-df27ed40fef2.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/849a16c7-54e2-8918-11ac-b5a00b649b7c.htm" />
+        <HelpTOCNode Title="Z Property " Url="html/6e87150b-f20b-e0d6-cda5-aa5c79e1f72f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8f6f3f0c-e99a-4dc5-85a2-b941e547c0d2" Title="Yxy Class" Url="html/76c1f0c0-61b0-e773-5d3f-0276114c514a.htm">
+      <HelpTOCNode Title="Yxy Members" Url="html/9be3e9e0-3710-1373-5c89-ab2c4e052ec5.htm" />
+      <HelpTOCNode Title="Yxy Constructor " Url="html/59714ea5-469f-8ba9-c191-48bb6a2058ae.htm" />
+      <HelpTOCNode Id="25ba0f2e-6bca-4c9d-96ab-564c1730f6b6" Title="Yxy Methods" Url="html/8a5b4214-2cf9-dc92-ee84-f4ea4cceb58e.htm">
+        <HelpTOCNode Title="Initialize Method " Url="html/3dcdc00e-2775-e4d8-1bde-088eedeeae44.htm" />
+        <HelpTOCNode Title="ToRgb Method " Url="html/cf365fc2-ebb1-278a-4ede-99b2f7688965.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="81c6c357-04ee-422a-951b-c227251c7b57" Title="Yxy Properties" Url="html/92f722db-f170-40e0-c2da-d301e76bfb57.htm">
+        <HelpTOCNode Title="X Property " Url="html/9f37827f-7dda-f447-8f22-93ea4c75aef7.htm" />
+        <HelpTOCNode Title="Y1 Property " Url="html/fee9df59-02a9-4a81-25c2-f0ae884cea49.htm" />
+        <HelpTOCNode Title="Y2 Property " Url="html/cf5f5fbc-c55e-57eb-156d-6de9994cf4f5.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="88553f99-d196-4799-a959-bebd3e7bcc29" Title="ColorMine.ColorSpaces.Comparisons Namespace" Url="html/f436a530-a592-dae5-5a9a-f11e71388186.htm">
+    <HelpTOCNode Id="2a74b635-4c4c-4252-b617-8888415281a1" Title="Cie1976Comparison Class" Url="html/bfdafd7e-50e5-8f3d-e653-3d8fda79aeac.htm">
+      <HelpTOCNode Title="Cie1976Comparison Members" Url="html/e1ca57a5-5d5c-0cf7-4da1-2a55afd3eac5.htm" />
+      <HelpTOCNode Title="Cie1976Comparison Constructor " Url="html/054191dd-29bb-6bf2-48b2-21381da12189.htm" />
+      <HelpTOCNode Id="215987ef-ddf9-4c08-8dde-884afbaf4eeb" Title="Cie1976Comparison Methods" Url="html/b6880831-f479-0a0f-0b26-09175044a07c.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/1bd0cea6-0259-a420-1d1c-bc197cfc385b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="889f9b39-2ff1-4d68-8b0b-672fab48037c" Title="Cie94Comparison Class" Url="html/1af339a7-d0d3-fa48-dfd0-ae315fd2e4de.htm">
+      <HelpTOCNode Title="Cie94Comparison Members" Url="html/9dbb98ba-cbdc-76a8-eaa1-dcfeba1a4df0.htm" />
+      <HelpTOCNode Id="50057c10-58e3-4bf9-8491-39db4dd97b80" Title="Cie94Comparison Constructor " Url="html/a07b44dc-41bb-cb79-0627-541e06905a18.htm">
+        <HelpTOCNode Title="Cie94Comparison Constructor " Url="html/b657d065-0009-0e10-df37-52bdb17b03c6.htm" />
+        <HelpTOCNode Title="Cie94Comparison Constructor (Cie94Comparison.Application)" Url="html/38fc5be3-7b07-47dc-2142-80df70835c66.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b85b5ea2-b0e4-4b1b-8453-265bab628605" Title="Cie94Comparison Methods" Url="html/fdab5338-3f92-6d1b-61d9-9c9fde2a5287.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/c2152712-c902-6e7c-dd2d-b94064c987de.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="Cie94Comparison.Application Enumeration" Url="html/cf224427-fa2e-38d1-212e-f00b7f7e054f.htm" />
+    <HelpTOCNode Id="24f34e4c-df70-4b6f-87da-e4182b35ea29" Title="CmcComparison Class" Url="html/f8581745-250c-88d5-9e3b-bde5e3be67ec.htm">
+      <HelpTOCNode Title="CmcComparison Members" Url="html/e2a682eb-8ecb-f747-74ca-d8a7c32ac063.htm" />
+      <HelpTOCNode Id="0865459e-39d7-41ba-aaa0-4b57f33404cf" Title="CmcComparison Constructor " Url="html/c6708f4f-203d-4738-bb90-e1967ce3f23c.htm">
+        <HelpTOCNode Title="CmcComparison Constructor " Url="html/21652d20-1a55-d16d-01e9-c60f5f9ff83a.htm" />
+        <HelpTOCNode Title="CmcComparison Constructor (Double, Double)" Url="html/0114e87d-abf2-2028-29c9-379ff83b41e7.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e6038cd1-c10d-4b1b-a5fc-383195595cf8" Title="CmcComparison Fields" Url="html/89d2c3d6-204e-a1f8-9c18-5bf037b2367a.htm">
+        <HelpTOCNode Title="DefaultChroma Field" Url="html/fbba03f5-d685-d0ea-c873-61c7f0c827a2.htm" />
+        <HelpTOCNode Title="DefaultLightness Field" Url="html/6c91967f-a831-301c-7b40-f4afda784dfa.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4734d77b-12cd-440c-b000-85c9c685ecc0" Title="CmcComparison Methods" Url="html/ba90ee3e-e896-d95f-d5d4-e0b08381cf21.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/dca4e7ab-875c-ce14-491e-8de9f3e8c68d.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="72c6ec22-83b3-4d76-9905-813e338d0f38" Title="IColorSpaceComparison Interface" Url="html/cf6c3f95-ed53-b581-c0e8-d04998271de6.htm">
+      <HelpTOCNode Title="IColorSpaceComparison Members" Url="html/2befe252-af17-4318-905d-f697b1305849.htm" />
+      <HelpTOCNode Id="a9a84d65-b0c8-4edc-b81d-59825bc4449b" Title="IColorSpaceComparison Methods" Url="html/0e463c38-301c-e05c-0270-4535661e1b8f.htm">
+        <HelpTOCNode Title="Compare Method " Url="html/3182e1c6-9622-d542-7747-7d76e49fff03.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

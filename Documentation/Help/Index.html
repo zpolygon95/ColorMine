@@ -1,0 +1,975 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<title>A Sandcastle Documented Class Library - Table of Content</title>
+<link rel="stylesheet" href="TOC.css">
+<link rel="shortcut icon" href="favicon.ico"/>
+<script type="text/javascript" src="TOC.js"></script>
+</head>
+
+<body onload="javascript: Initialize('.aspx');" onresize="javascript: ResizeTree();">
+<form id="IndexForm" runat="server">
+
+<div id="TOCDiv" class="TOCDiv">
+
+<div id="divSearchOpts" class="SearchOpts" style="height: 100px; display: none;">
+<img class="TOCLink" onclick="javascript: ShowHideSearch(false);"
+    src="CloseSearch.png" height="16" width="16" alt="Hide search" style="float: right;"/>
+Keyword(s) for which to search:
+<input id="txtSearchText" type="text" style="width: 100%;"
+  onkeypress="javascript: return OnSearchTextKeyPress(event);" /><br />
+<input id="chkSortByTitle" type="checkbox" /><label for="chkSortByTitle">&nbsp;Sort results by title</label><br />
+<input type="button" value="Search" onclick="javascript: return PerformSearch();" />
+</div>
+
+<div id="divIndexOpts" class="IndexOpts" style="height: 25px; display: none;">
+<img class="TOCLink" onclick="javascript: ShowHideIndex(false);"
+    src="CloseSearch.png" height="17" width="17" alt="Hide index" style="float: right;"/>
+Keyword Index
+</div>
+
+<div id="divNavOpts" class="NavOpts" style="height: 20px;">
+    <img class="TOCLink" onclick="javascript: SyncTOC();" src="SyncTOC.gif"
+        height="16" width="16" alt="Sync to TOC"/>
+    <img class="TOCLink" onclick="javascript: ExpandOrCollapseAll(true);"
+        src="ExpandAll.bmp" height="16" width="16" alt="Expand all "/>
+    <img class="TOCLink" onclick="javascript: ExpandOrCollapseAll(false);"
+        src="CollapseAll.bmp" height="16" width="16" alt="Collapse all" />
+    <a href="#" title="Click to obtain a direct link to the displayed topic"
+        style="margin-left: 10px; vertical-align: top;"
+        onclick="javascript: ShowDirectLink();">Direct Link</a>
+</div>
+
+<div class="Tree" id="divSearchResults" style="display: none;"
+    onselectstart="javascript: return false;">
+</div>
+
+<div class="Tree" id="divIndexResults" style="display: none;"
+    onselectstart="javascript: return false;">
+</div>
+
+<div class="Tree" id="divTree" onselectstart="javascript: return false;">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/a5b3d747-1955-dd6b-54e8-5a298b6202fb.htm" target="TopicContent">ColorMine.ColorSpaces Namespace</a>
+<div class="Hidden">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/85ba5748-93a6-887b-fceb-f15ae6271e57.htm" target="TopicContent">Cmy Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/86ec007d-a15a-d638-359a-9fd15bdb297d.htm" target="TopicContent">Cmy Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/107f3687-0360-5b2c-ca0f-e0dbdaad7b7f.htm" target="TopicContent">Cmy Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/80793053-db23-4ca7-e706-4e2c3b2a3fb0.htm" target="TopicContent">Cmy Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9705660c-5234-97d5-1b76-89da6c4d100f.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c9fadd1f-2f76-049e-0631-a791aa862b80.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/9b077aba-dc61-2526-1f28-eaaa9e69c4e2.htm" target="TopicContent">Cmy Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/30ee4a99-e096-faf0-cf1c-de51d02a1830.htm" target="TopicContent">C Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/36508f4f-4117-dbc0-7920-73463b658faa.htm" target="TopicContent">M Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/84c4aacc-5255-c84f-05a1-0c5186655c96.htm" target="TopicContent">Y Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/2fb6fb68-695e-42cf-6e99-33cfd2545801.htm" target="TopicContent">Cmyk Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6b3185b1-dd69-3d4c-4446-f57767d7fcdb.htm" target="TopicContent">Cmyk Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/da7525b1-fff9-81bc-15c8-a8fcd9b8de5b.htm" target="TopicContent">Cmyk Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/91e40ca3-f7bf-40c3-d539-286bd226801f.htm" target="TopicContent">Cmyk Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d4ade412-ac41-853d-73f2-183d968300bf.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e0ad8f4d-e20c-e847-d386-0ffcb5cc7c0a.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/1168f7b9-d451-9bcd-c972-cab752d713dd.htm" target="TopicContent">Cmyk Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/cf389226-356c-25e4-1717-ca7c96deb56a.htm" target="TopicContent">C Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e187ae23-b8c1-bc0c-7f55-45679ed69612.htm" target="TopicContent">K Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/4b706deb-d8e9-411b-19a7-83bfc260e3cf.htm" target="TopicContent">M Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3012d686-78a3-deb0-0a03-12e2cbf54188.htm" target="TopicContent">Y Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/a9f666ad-4d93-cfe3-c76c-c3640e3f9af8.htm" target="TopicContent">ColorSpace Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/fa7d9ca1-60f7-914b-b13c-8846a3c99525.htm" target="TopicContent">ColorSpace Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/8df5f30c-61a8-38f2-5451-850ea5899e0e.htm" target="TopicContent">ColorSpace Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/898fdb24-6d03-47f8-6c36-1220ecedd6b3.htm" target="TopicContent">ColorSpace Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/95336193-e1ad-73e4-9ea1-11cd3da5b8f4.htm" target="TopicContent">Compare Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/1f2a1d4d-9729-5a91-0b48-0688cc239aa7.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d848fee3-84dc-91f0-7b2f-632cdf9cb973.htm" target="TopicContent">To(T) Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/14bdc0ca-37af-05a5-6c58-ef8aba3282a4.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5d327ac3-255d-e800-0e85-a4dce15c9662.htm" target="TopicContent">ComparisonAlgorithm Delegate</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/534bddb8-e8a4-b8dc-363c-bb7bcce3a3f5.htm" target="TopicContent">Hsb Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5fb37814-61d4-824e-1c71-71943a9c499c.htm" target="TopicContent">Hsb Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3260a8f9-daef-d98c-ec32-ba164de8faa0.htm" target="TopicContent">Hsb Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/a12a1f72-e4d4-fff1-992a-ffcaaf84036d.htm" target="TopicContent">Hsb Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e2125716-f2e8-f23f-b15b-69a0934df3f0.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/424a067c-35a8-8e07-deac-6ff3471c0d19.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/77a97d10-87ae-0b04-b963-5b5cb203d8e6.htm" target="TopicContent">Hsb Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/85df457f-6d9e-1908-c75c-b2e66518d3a3.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/47e215ae-ed64-4795-e36b-fee3754292c7.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/a8522fd9-cef9-0074-ab83-f574b4930572.htm" target="TopicContent">S Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/f5012e9f-28e1-d908-1c87-7a5b5a2f8633.htm" target="TopicContent">Hsl Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/1eecf806-bc95-aac8-a3a7-d14edf345aa3.htm" target="TopicContent">Hsl Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/ea7ba046-3984-4fc2-5d09-9c15afa05c11.htm" target="TopicContent">Hsl Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/30337854-adb7-2e79-e0b4-08517ba7a515.htm" target="TopicContent">Hsl Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9e32e3f1-632b-6ce9-9702-a9677851bf10.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/172704bd-65af-c788-fc89-d3c28fbdc793.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/b83d2d6e-234e-4408-58a6-430c881845e0.htm" target="TopicContent">Hsl Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/8cd08362-92fd-5f42-e9d2-3dfb6b1f9b19.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/bdcd3be0-afdd-791b-57fa-d5163e9f4363.htm" target="TopicContent">L Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/00097c5f-9d33-26b2-367f-653531eb7996.htm" target="TopicContent">S Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/630d43b6-1d43-abad-f8a1-4392bdc01d5c.htm" target="TopicContent">Hsv Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/2b336fde-172b-acd5-2bf0-2bda32224c49.htm" target="TopicContent">Hsv Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/25bb7eae-bfb3-73ad-772b-fcba711ee13d.htm" target="TopicContent">Hsv Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/70130e52-0980-7dae-512e-faeee4408f83.htm" target="TopicContent">Hsv Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f7941bdb-521a-1cfa-aa7c-4c0b7ec92f16.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/713c0d2b-39fd-4605-4bac-c2a969dcfaa1.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/c966f62d-105c-a55a-6899-27cc6f1cb9a5.htm" target="TopicContent">Hsv Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e04b6836-71c0-32db-fa0c-c6fced9deaa0.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d9fbdaec-deb2-7228-d880-df781802f373.htm" target="TopicContent">S Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5084e16c-22ec-b08f-4c85-1e13da44c311.htm" target="TopicContent">V Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/beac72e6-2e85-db81-42cf-e60992fdb63a.htm" target="TopicContent">HunterLab Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/45ed0cb1-774b-a9e1-e6a2-1c2cb5d3c55a.htm" target="TopicContent">HunterLab Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/7bfbf516-87c0-0df9-51bc-ff0af735a782.htm" target="TopicContent">HunterLab Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/8e96ee18-c596-c88f-7d58-e2f2327bb6aa.htm" target="TopicContent">HunterLab Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/141082bb-8897-8085-3418-1c60a21442dc.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/7aa85b3c-2a53-0249-9e55-cf5a13e3dfb0.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/2c1dd9b0-3c33-87ad-7b68-6f46b56a534c.htm" target="TopicContent">HunterLab Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/339b8f92-0e11-ae5a-152c-b67a882c1f5a.htm" target="TopicContent">A Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/ad853b7b-9fb8-561b-a908-c18b27ed1290.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5401a51b-70c3-4311-fb21-03a7e8d84533.htm" target="TopicContent">L Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/e5506770-76a6-f12a-2cf1-e8b9025f8eb9.htm" target="TopicContent">ICmy Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/ae842d80-157b-0de7-9212-b803963b1dbe.htm" target="TopicContent">ICmy Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/1cd1a3fd-451c-920b-c7da-5bdade0cf094.htm" target="TopicContent">ICmy Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/bb92fa8b-7499-9f93-ae86-a0460ffa360d.htm" target="TopicContent">ICmy Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/97ad0426-8b41-0b91-6ce0-3c06d2a3b5dd.htm" target="TopicContent">C Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5878c44b-5ad2-2921-ef55-5fa9f760a2c8.htm" target="TopicContent">M Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/7a32b17b-0bd5-915a-d59f-dbdff5983e5b.htm" target="TopicContent">Y Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/fd37ff09-4915-7761-d742-13b509ac973d.htm" target="TopicContent">ICmyk Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/553a8f34-7b72-f1a4-bd25-6482e438bbc3.htm" target="TopicContent">ICmyk Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d9787767-f1ca-c8cb-bb46-8c86c060594d.htm" target="TopicContent">ICmyk Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/b35a463f-30ff-9951-fe88-26e6e2a9de00.htm" target="TopicContent">ICmyk Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c9700eb6-3717-d7c1-e298-947903ee1205.htm" target="TopicContent">C Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f7b1ea22-c6bc-f69b-4245-6860ea9f4c28.htm" target="TopicContent">K Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/15a83129-0854-bce7-257c-f5fc72e66067.htm" target="TopicContent">M Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/233d32e4-b3fc-3f89-0035-4195190dc8be.htm" target="TopicContent">Y Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/42b436ff-d05a-8cfb-8e5a-5d9a25f985cb.htm" target="TopicContent">IColorSpace Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/8bf4f799-0f21-ab2c-9d28-ae544850ca8b.htm" target="TopicContent">IColorSpace Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/9a8ecc7c-8d97-d603-f2ee-b43b739ed715.htm" target="TopicContent">IColorSpace Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3dc0d985-ff3b-90f4-9e5a-cde5856c6f76.htm" target="TopicContent">Compare Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/31b0b854-3955-193c-4c18-e377ce2588fa.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/755808cd-fb6f-b838-b30c-30a33c4cd922.htm" target="TopicContent">To(T) Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c9115fc9-507e-4b30-e91d-ea605841dabc.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/5f95506c-ffaf-63ad-116f-9021a09ead21.htm" target="TopicContent">IHsb Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9ff657b9-c6c0-8fd3-4909-f1875f932b0b.htm" target="TopicContent">IHsb Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/67c01e17-5cc9-80f1-c613-45f43792e044.htm" target="TopicContent">IHsb Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/4c86226e-e831-8f3e-3270-e229b63132c6.htm" target="TopicContent">IHsb Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e837a001-e942-efd0-41a4-1f6bd7427bc8.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9a08b4ee-ce9b-e7c8-786e-cfcec9cfb42b.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5f75c508-449c-d0d9-9fe1-e9de4d94ea2f.htm" target="TopicContent">S Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/d8fdfea6-f256-80e8-9a6a-ff1509c0f141.htm" target="TopicContent">IHsl Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/42c3f943-b238-a361-3846-24c289ee108b.htm" target="TopicContent">IHsl Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/1bf9ea72-95f8-b258-e42b-5e8ae08c518d.htm" target="TopicContent">IHsl Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/f21b13b0-b3b1-ffc8-0ea5-45edefa9d2c5.htm" target="TopicContent">IHsl Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3d3c83c4-23fe-3d82-ab09-3a64ba2b819c.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e0d9a4f0-ac66-85a6-c400-bd8261cf7b25.htm" target="TopicContent">L Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/0bd82f06-c3c0-c0ad-6062-b9815818b5d9.htm" target="TopicContent">S Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/c37c9d64-38d5-cf63-5069-efa9a308b8f0.htm" target="TopicContent">IHsv Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f8035578-4bd4-eee0-caad-b89db4751a60.htm" target="TopicContent">IHsv Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/4ff7f02a-3148-b8ff-dce9-921187524c74.htm" target="TopicContent">IHsv Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/4bb9c385-b5a7-022a-39f4-5887b8b65c7b.htm" target="TopicContent">IHsv Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/198f2b9f-e607-3a81-0d81-37e00dfaf8e1.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d0413e6e-7264-1090-5ee1-c25e3e1ca61e.htm" target="TopicContent">S Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/a99722ab-7b8a-b3c8-d984-a9ec5e0c73b0.htm" target="TopicContent">V Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/4eebc84e-66da-efde-2306-1fd6bb2908ed.htm" target="TopicContent">IHunterLab Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/36168199-b452-f048-599e-189c7c850d69.htm" target="TopicContent">IHunterLab Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/7dc0a5cc-0746-c7d7-f591-f432775a10f0.htm" target="TopicContent">IHunterLab Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/9113d355-32ba-0f83-e7df-29eb26bb9b2e.htm" target="TopicContent">IHunterLab Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/882c87ec-7e93-cef9-4bb0-f23a0a81c469.htm" target="TopicContent">A Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/edd0fe70-8cf0-b915-6327-d06a617069b0.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/33d80bf4-6fc8-ee4d-feeb-054eaa93fdf0.htm" target="TopicContent">L Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/f9b9e0fc-77bc-aa9b-0917-7cc9da62f6d7.htm" target="TopicContent">ILab Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/0601fbc9-7bb5-3938-4f98-3f30a71493ef.htm" target="TopicContent">ILab Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/12b7740c-0602-29e1-15a0-9798b2a7294f.htm" target="TopicContent">ILab Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/9b040974-cbb5-6a52-9902-228daf6813d1.htm" target="TopicContent">ILab Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d35a0064-2214-183e-e4c4-d5b92a1f3a2f.htm" target="TopicContent">A Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f28d708a-7b4e-b866-19fe-de7327d471b5.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/5614ed9c-9c4b-0206-075d-b12c1586cd07.htm" target="TopicContent">L Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/627e6516-2424-d701-a7f7-96d0a99f0cf6.htm" target="TopicContent">ILch Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f4ab9a19-8519-278f-1254-ec35db2e177b.htm" target="TopicContent">ILch Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/0e61b933-7b26-4d15-be74-ed2106217c07.htm" target="TopicContent">ILch Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/a47eab3e-4f5c-0f6f-e8ef-321119a0fe1e.htm" target="TopicContent">ILch Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/455cf591-29bb-0c1c-af70-f77e7deabae0.htm" target="TopicContent">C Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3c5987b3-9e25-6ac7-6b60-040e3680890f.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/b4cea9c8-00ff-ebbd-28a4-cbf89047418e.htm" target="TopicContent">L Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/44452475-39a8-bd8a-6bf5-bf6accee54c1.htm" target="TopicContent">ILuv Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/2be19fab-b0b0-a4aa-fdb0-b13e36d1e718.htm" target="TopicContent">ILuv Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/eff47f88-6b50-9842-7254-56d5edc70bdb.htm" target="TopicContent">ILuv Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/6ef2d0c4-e43d-092e-c0a5-812c1615a71e.htm" target="TopicContent">ILuv Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3f27e37e-529a-26c4-07dd-3e1173f1d521.htm" target="TopicContent">L Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/83f91658-e892-2293-329d-88a54f1570fc.htm" target="TopicContent">U Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f639daca-161f-183f-2492-d2cbd6da8eaa.htm" target="TopicContent">V Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/968acf76-959f-f7e0-79af-66dc4609e481.htm" target="TopicContent">IRgb Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c2ba63a9-7805-d518-3f96-0dbadbbb5b46.htm" target="TopicContent">IRgb Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/b3fb48a6-a834-255f-e1b1-4fbb2205474d.htm" target="TopicContent">IRgb Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/457cbf0e-5a48-1e7e-2a81-6925218c93bd.htm" target="TopicContent">IRgb Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/4303fe8f-2e03-d78f-a62f-302506d01077.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/a6f4592d-959f-4da7-0815-39ff569d8339.htm" target="TopicContent">G Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d57b4dc0-2e81-3005-c299-c6b8905ef152.htm" target="TopicContent">R Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/c21673ff-d02f-ca19-26a8-e2f3e646444d.htm" target="TopicContent">IXyz Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6cace5d5-3286-6992-cfd7-b60e916068fa.htm" target="TopicContent">IXyz Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/39f6bc87-3e11-623f-3c02-0e7d67246a8d.htm" target="TopicContent">IXyz Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/d22ae6ba-637e-41c8-ddc1-0f371fc068f6.htm" target="TopicContent">IXyz Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/0d92e60d-3190-f483-9ccc-b892438e26c7.htm" target="TopicContent">X Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3b4191a0-9f55-4086-a9cf-e8ee88c444f4.htm" target="TopicContent">Y Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c978787e-c19e-2650-7721-626c6f43fc99.htm" target="TopicContent">Z Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/8743bc2a-b192-5ebc-0767-0dcce73d35e1.htm" target="TopicContent">IYxy Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/215d7f22-5c16-a3c0-df83-832b752f793d.htm" target="TopicContent">IYxy Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3ec6e2f2-0321-9785-31a9-f870ed879b8c.htm" target="TopicContent">IYxy Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/e3096210-5ac8-6abc-8b24-ce6bd9e71c42.htm" target="TopicContent">IYxy Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/eb291fb7-209c-f5b4-6a54-917947a2019b.htm" target="TopicContent">X Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3c00b85f-e74b-b94e-ce81-949c4d66d7fa.htm" target="TopicContent">Y1 Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3b043a87-5192-c66a-7b54-b66a93a27cf3.htm" target="TopicContent">Y2 Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/21180888-b2f5-9ed4-3bb9-fa5adbe11633.htm" target="TopicContent">Lab Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/77b7968d-dd1d-f71c-07e2-ffa5520bd78f.htm" target="TopicContent">Lab Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/ad739b32-7e03-cfb3-5e92-e2a110bd7851.htm" target="TopicContent">Lab Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/2c7aa18c-02c1-0539-5c68-bfb9f379c999.htm" target="TopicContent">Lab Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/4ef1223e-4ae8-1204-ebfb-bb695a33b8ea.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6e1f577e-f8c0-6cc8-a447-8e3aa0ad6201.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/eef95d61-965f-80d7-7ac2-25a25f268fb8.htm" target="TopicContent">Lab Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e11ba4a5-ca78-ce19-c610-72c43f28f424.htm" target="TopicContent">A Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6bf33028-1872-4f4d-9e27-1165810049a8.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/faa17916-0f91-fc44-eeec-8cee5b9f03d2.htm" target="TopicContent">L Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/e1f7b2a4-8b61-e95a-f3c9-cd8cd4be2bc4.htm" target="TopicContent">Lch Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/0f342f19-6c7f-8eaf-71df-250507fb5c1f.htm" target="TopicContent">Lch Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9838206d-759d-b938-2cc1-7cfb92a2a9bb.htm" target="TopicContent">Lch Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/25e84a9d-de8f-38dc-6583-bc1fdbae7dc8.htm" target="TopicContent">Lch Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/32fc493e-2e75-57eb-8c2e-f8fcd2aaab59.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/8ddab615-0192-e547-ab95-a088949b7140.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/5372fa63-7512-a755-81a6-e79acdff042c.htm" target="TopicContent">Lch Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d9a3748e-8de8-0bb3-3d76-821e27661883.htm" target="TopicContent">C Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/b2b82a0c-9cf5-ac3b-36d1-741aad524bac.htm" target="TopicContent">H Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/d33153f1-d1f4-5183-851e-537285a55e3b.htm" target="TopicContent">L Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/52f8772e-ef6a-1207-db66-510de75f2528.htm" target="TopicContent">Luv Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/cbd446b4-636a-8ef9-e0e2-9abc0791b5bc.htm" target="TopicContent">Luv Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/bb2d694d-506e-c1dc-dd09-df8b1545d2cb.htm" target="TopicContent">Luv Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/4bcb7095-c61c-e8d9-d516-d04d748e3df3.htm" target="TopicContent">Luv Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/ce4591a9-3133-bc6a-d56c-d0f6cc14d797.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/7cc856f8-b73c-480d-239b-fa843de9d34a.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/61bb2251-d7bd-42ac-5e72-e791b6a893e8.htm" target="TopicContent">Luv Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6c0382c4-dd02-5748-7af3-eefd1ba76d78.htm" target="TopicContent">L Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c92a57a0-e167-e1b3-7e97-3660379f617d.htm" target="TopicContent">U Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/37c34da4-8e1b-67fd-6cba-c7f3855002ff.htm" target="TopicContent">V Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/82eb261c-000f-1750-8969-256814e09ca5.htm" target="TopicContent">Rgb Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/a81cad7b-9b68-cd73-7133-d3882d60d2b4.htm" target="TopicContent">Rgb Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/43e8ccd2-737e-2c09-1574-18663558fb22.htm" target="TopicContent">Rgb Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/f7dbefb0-c3b3-e46d-24c5-e8eb84816a79.htm" target="TopicContent">Rgb Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/53e049a9-33b1-9297-5d17-452f833ce661.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/bd78af69-1405-0142-2226-5784d7c0db76.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/963ffb0b-2814-18cc-38ac-85a654118825.htm" target="TopicContent">Rgb Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/7c50e01d-c8d1-5923-3849-f66c1bf215d0.htm" target="TopicContent">B Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/563ac78f-a9ef-8ea4-506b-e6547799cc78.htm" target="TopicContent">G Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/1669f8bb-d83f-ad9b-c190-373ef5cd19d3.htm" target="TopicContent">R Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/ee2d6a2b-a5ff-6a29-fc71-e76a0478907d.htm" target="TopicContent">Xyz Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/2f539a4b-f998-c4b0-9a22-eb52486efc90.htm" target="TopicContent">Xyz Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f3c03232-a299-ba28-d934-bbddd1a678af.htm" target="TopicContent">Xyz Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/9a5f3067-ab0e-d6ef-ed5c-eae2d60782f2.htm" target="TopicContent">Xyz Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/930a9194-d930-6f12-88ec-a5633f15a9f9.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/f3dcc391-4ccc-e434-05df-0858b7362aa5.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/878483a9-e40c-5d07-7871-3cf10a4c528a.htm" target="TopicContent">Xyz Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/968f1cfa-b8d8-bb65-1d64-df27ed40fef2.htm" target="TopicContent">X Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/849a16c7-54e2-8918-11ac-b5a00b649b7c.htm" target="TopicContent">Y Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6e87150b-f20b-e0d6-cda5-aa5c79e1f72f.htm" target="TopicContent">Z Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/76c1f0c0-61b0-e773-5d3f-0276114c514a.htm" target="TopicContent">Yxy Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9be3e9e0-3710-1373-5c89-ab2c4e052ec5.htm" target="TopicContent">Yxy Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/59714ea5-469f-8ba9-c191-48bb6a2058ae.htm" target="TopicContent">Yxy Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/8a5b4214-2cf9-dc92-ee84-f4ea4cceb58e.htm" target="TopicContent">Yxy Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3dcdc00e-2775-e4d8-1bde-088eedeeae44.htm" target="TopicContent">Initialize Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/cf365fc2-ebb1-278a-4ede-99b2f7688965.htm" target="TopicContent">ToRgb Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/92f722db-f170-40e0-c2da-d301e76bfb57.htm" target="TopicContent">Yxy Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9f37827f-7dda-f447-8f22-93ea4c75aef7.htm" target="TopicContent">X Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/fee9df59-02a9-4a81-25c2-f0ae884cea49.htm" target="TopicContent">Y1 Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/cf5f5fbc-c55e-57eb-156d-6de9994cf4f5.htm" target="TopicContent">Y2 Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/f436a530-a592-dae5-5a9a-f11e71388186.htm" target="TopicContent">ColorMine.ColorSpaces.Comparisons Namespace</a>
+<div class="Hidden">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/bfdafd7e-50e5-8f3d-e653-3d8fda79aeac.htm" target="TopicContent">Cie1976Comparison Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e1ca57a5-5d5c-0cf7-4da1-2a55afd3eac5.htm" target="TopicContent">Cie1976Comparison Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/054191dd-29bb-6bf2-48b2-21381da12189.htm" target="TopicContent">Cie1976Comparison Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/b6880831-f479-0a0f-0b26-09175044a07c.htm" target="TopicContent">Cie1976Comparison Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/1bd0cea6-0259-a420-1d1c-bc197cfc385b.htm" target="TopicContent">Compare Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/1af339a7-d0d3-fa48-dfd0-ae315fd2e4de.htm" target="TopicContent">Cie94Comparison Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/9dbb98ba-cbdc-76a8-eaa1-dcfeba1a4df0.htm" target="TopicContent">Cie94Comparison Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/a07b44dc-41bb-cb79-0627-541e06905a18.htm" target="TopicContent">Cie94Comparison Constructor </a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/b657d065-0009-0e10-df37-52bdb17b03c6.htm" target="TopicContent">Cie94Comparison Constructor </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/38fc5be3-7b07-47dc-2142-80df70835c66.htm" target="TopicContent">Cie94Comparison Constructor (Cie94Comparison.Application)</a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/fdab5338-3f92-6d1b-61d9-9c9fde2a5287.htm" target="TopicContent">Cie94Comparison Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/c2152712-c902-6e7c-dd2d-b94064c987de.htm" target="TopicContent">Compare Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/cf224427-fa2e-38d1-212e-f00b7f7e054f.htm" target="TopicContent">Cie94Comparison.Application Enumeration</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/f8581745-250c-88d5-9e3b-bde5e3be67ec.htm" target="TopicContent">CmcComparison Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/e2a682eb-8ecb-f747-74ca-d8a7c32ac063.htm" target="TopicContent">CmcComparison Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/c6708f4f-203d-4738-bb90-e1967ce3f23c.htm" target="TopicContent">CmcComparison Constructor </a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/21652d20-1a55-d16d-01e9-c60f5f9ff83a.htm" target="TopicContent">CmcComparison Constructor </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/0114e87d-abf2-2028-29c9-379ff83b41e7.htm" target="TopicContent">CmcComparison Constructor (Double, Double)</a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/89d2c3d6-204e-a1f8-9c18-5bf037b2367a.htm" target="TopicContent">CmcComparison Fields</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/fbba03f5-d685-d0ea-c873-61c7f0c827a2.htm" target="TopicContent">DefaultChroma Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/6c91967f-a831-301c-7b40-f4afda784dfa.htm" target="TopicContent">DefaultLightness Field</a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/ba90ee3e-e896-d95f-d5d4-e0b08381cf21.htm" target="TopicContent">CmcComparison Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/dca4e7ab-875c-ce14-491e-8de9f3e8c68d.htm" target="TopicContent">Compare Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/cf6c3f95-ed53-b581-c0e8-d04998271de6.htm" target="TopicContent">IColorSpaceComparison Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/2befe252-af17-4318-905d-f697b1305849.htm" target="TopicContent">IColorSpaceComparison Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.gif"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/0e463c38-301c-e05c-0270-4535661e1b8f.htm" target="TopicContent">IColorSpaceComparison Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/3182e1c6-9622-d542-7747-7d76e49fff03.htm" target="TopicContent">Compare Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="TOCSizer" class="TOCSizer" onmousedown="OnMouseDown(event)" onselectstart="javascript: return false;"></div>
+
+<iframe id="TopicContent" name="TopicContent" class="TopicContent" src="html/a5b3d747-1955-dd6b-54e8-5a298b6202fb.htm">
+This page uses an IFRAME but your browser does not support it.
+</iframe>
+
+</form>
+
+</body>
+
+</html>
