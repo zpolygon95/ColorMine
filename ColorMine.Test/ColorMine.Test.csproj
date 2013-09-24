@@ -61,6 +61,7 @@
       <DependentUpon>ColorSpaceTest.tt</DependentUpon>
     </Compile>
     <Compile Include="ColorSpaces\Comparisons\Cie94ComparisonTest.cs" />
+    <Compile Include="ColorSpaces\Comparisons\CieDe2000Test.cs" />
     <Compile Include="ColorSpaces\Comparisons\CmcComparisonTest.cs" />
     <Compile Include="ColorSpaces\ConversionTests.cs">
       <AutoGen>True</AutoGen>
