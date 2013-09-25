@@ -613,6 +613,95 @@ namespace ColorMine.Test.ColorSpaces
 
         }
 	}
+	public class HsbTest
+    {
+		[TestClass]
+        public class To : ColorSpaceTest
+        {
+			
+			[TestMethod]
+            public void AliceBlueHsbToCmy()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Cmy { C = .06, M = .028, Y = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToCmyk()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Cmyk { C = .06, M = .028, Y = 0, K = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToHsl()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Hsl { H = 208, S = 100, L = 97, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToHsb()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Hsb { H = 208, S = 100, B = 97, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToLab()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Lab { L = 97.179, A = -1.3688, B = -4.358, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToLch()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Lch { L = 97.179, C = 4.5683, H = 252.551, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToRgb()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Rgb { R = 240, G = 248, B = 255, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToXyz()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Xyz { X = 87.553, Y = 92.880, Z = 107.921, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+			
+			[TestMethod]
+            public void AliceBlueHsbToYxy()
+            {
+				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
+				var expectedColor = new Yxy { Y1 = 92.880, X = .30363, Y2 = .32210, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+        }
+	}
 	public class LabTest
     {
 		[TestClass]
