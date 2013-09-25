@@ -43,7 +43,7 @@ double deltaE = myRgb.Compare(myCmy,new Cie1976Comparison());
 double deltaE = myXyz.Compare(myLab,new CmcComparison(lightness: 2, chroma: 1));
 ```
 
-### CIE94
+### [CIE94](http://colormine.org/delta-e-calculator/Cie94)
 ```c#
 double deltaE = myYxy.Compare(myHsl,new Cie94(Cie94Comparison.Application.GraphicArts));
 ```
