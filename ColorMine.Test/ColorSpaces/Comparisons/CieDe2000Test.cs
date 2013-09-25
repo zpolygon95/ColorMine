@@ -35,7 +35,7 @@ namespace ColorMine.Test.ColorSpaces.Comparisons
                     B = 67.2200
                 };
 
-                ReturnsExpectedValueForKnownInput(26.106, a, b);
+                ReturnsExpectedValueForKnownInput(26.1061, a, b);
             }
         }
     }
