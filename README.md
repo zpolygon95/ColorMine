@@ -31,7 +31,7 @@ Online example at http://colormine.org/color-converter
 
 ## Delta-E
 
-Delta-E calculations take and compare colors in any of the supported formates.
+Delta-E calculations take and compare colors in any of the supported formats.
 
 ### [CIE76](http://colormine.org/delta-e-calculator/)
 ```c#
@@ -75,3 +75,4 @@ Note: Delta-e calculations are [quasimetric](http://en.wikipedia.org/wiki/Quasim
 * CIE76
 * CMC l:c
 * CIE94
+* CIE2000
