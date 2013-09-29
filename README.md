@@ -43,9 +43,14 @@ double deltaE = myRgb.Compare(myCmy,new Cie1976Comparison());
 double deltaE = myXyz.Compare(myLab,new CmcComparison(lightness: 2, chroma: 1));
 ```
 
-### [CIE94](http://colormine.org/delta-e-calculator/Cie94)
+### [CIE94](http://colormine.org/delta-e-calculator/cie94)
 ```c#
 double deltaE = myYxy.Compare(myHsl,new Cie94(Cie94Comparison.Application.GraphicArts));
+```
+
+### [CIE2000](http://colormine.org/delta-e-calculator/cie2000)
+```c#
+double deltaE = myHunterLab.Compare(myLuv, new CieDe2000());
 ```
 
 Note: Delta-e calculations are [quasimetric](http://en.wikipedia.org/wiki/Quasimetric#Quasimetrics), the result of comparing color a to b isn't always equal to comparing color b to a...but it will probably be pretty close!
