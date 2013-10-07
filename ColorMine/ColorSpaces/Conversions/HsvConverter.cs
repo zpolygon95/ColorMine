@@ -6,7 +6,7 @@ namespace ColorMine.ColorSpaces.Conversions
     // Code lovingly copied from StackOverflow (and tweaked a bit)
     // Question/Answer: http://stackoverflow.com/questions/359612/how-to-change-rgb-color-to-hsv/1626175#1626175
     // Submitter: Greg http://stackoverflow.com/users/12971/greg
-
+    // License: http://creativecommons.org/licenses/by-sa/3.0/
     internal static class HsvConverter
     {
         internal static void ToColorSpace(IRgb color, IHsv item)

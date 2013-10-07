@@ -1,4 +1,6 @@
-﻿using ColorMine.ColorSpaces.Conversions.Utility;
+﻿using System;
+using System.Windows.Media;
+using ColorMine.ColorSpaces.Conversions.Utility;
 
 namespace ColorMine.ColorSpaces.Conversions
 {
@@ -29,6 +31,15 @@ namespace ColorMine.ColorSpaces.Conversions
             }
         }
 
+        internal static void ToColorSpace(IRgb color, ICmyk item, Uri profile)
+        {
+            var cmyk = WindowsColorSystem.TranslateColor(profile, color);
+            item.C = cmyk.C;
+            item.M = cmyk.M;
+            item.Y = cmyk.Y;
+            item.K = cmyk.K;
+        }
+
         internal static IRgb ToColor(ICmyk item)
         {
             var cmy = new Cmy
@@ -39,6 +50,18 @@ namespace ColorMine.ColorSpaces.Conversions
                 };
 
             return cmy.ToRgb();
+        }
+
+        internal static IRgb ToColor(ICmyk item, Uri profile)
+        {
+            var points = new[] { (float)item.C, (float)item.M, (float)item.Y, (float)item.K };
+            var color = Color.FromValues(points, profile);
+            return new Rgb
+                {
+                    R = color.R,
+                    G = color.G,
+                    B = color.B
+                };
         }
     }
 }
