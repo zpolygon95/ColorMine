@@ -150,32 +150,40 @@ namespace ColorMine.ColorSpaces.Conversions
             [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 2), Out] CMYKColor[] outputColors,
             ColorType ctOutput);
 
-        public static ICmyk TranslateColor(Uri profileUri, IRgb rgb)
+        public static ICmyk TranslateColor(IRgb rgb, Uri cmykProfile, Uri rgbProfile)
         {
             const double dividend = 65535;
             var profileName = new StringBuilder(256);
             var size = (uint)profileName.Capacity * 2;
-            GetStandardColorSpaceProfile(0, LogicalColorSpace.sRGB, profileName, ref size);
 
-            var sRGBFilename = new ProfileFilename(profileName.ToString());
+            ProfileFilename sRGBFilename;
+            if (rgbProfile == null)
+            {
+                GetStandardColorSpaceProfile(0, LogicalColorSpace.sRGB, profileName, ref size);
+                sRGBFilename = new ProfileFilename(profileName.ToString());
+            }
+            else
+            {
+                sRGBFilename = new ProfileFilename(rgbProfile.LocalPath);
+            }
+
             var hSRGBProfile = OpenColorProfile(sRGBFilename, ProfileRead, FileShare.Read, CreateDisposition.OpenExisting);
-
-            var isoCoatedFilename = new ProfileFilename(profileUri.ToString());
+            var isoCoatedFilename = new ProfileFilename(cmykProfile.LocalPath);
             var hIsoCoatedProfile = OpenColorProfile(isoCoatedFilename, ProfileRead, FileShare.Read, CreateDisposition.OpenExisting);
 
-            var profiles = new [] { hSRGBProfile, hIsoCoatedProfile };
-            var intents = new [] { IntentPerceptual };
+            var profiles = new[] { hSRGBProfile, hIsoCoatedProfile };
+            var intents = new[] { IntentPerceptual };
             var transform = CreateMultiProfileTransform(profiles, 2, intents, 1, ColorTransformMode.BestMode, IndexDontCare);
 
             var rgbColors = new RGBColor[1];
             rgbColors[0] = new RGBColor();
-            
+
             var cmykColors = new CMYKColor[1];
             cmykColors[0] = new CMYKColor();
 
-            rgbColors[0].red = (ushort)(rgb.R * (int)dividend / 255);
-            rgbColors[0].green = (ushort)(rgb.G * (int)dividend / 255);
-            rgbColors[0].blue = (ushort)(rgb.B * (int)dividend / 255);
+            rgbColors[0].red = (ushort)(rgb.R * dividend / 255.0);
+            rgbColors[0].green = (ushort)(rgb.G * dividend / 255.0);
+            rgbColors[0].blue = (ushort)(rgb.B * dividend / 255.0);
 
             TranslateColors(transform, rgbColors, 1, ColorType.RGB, cmykColors, ColorType.CMYK);
 
@@ -184,48 +192,21 @@ namespace ColorMine.ColorSpaces.Conversions
             CloseColorProfile(hIsoCoatedProfile);
 
             return new Cmyk
-                {
-                    C = cmykColors[0].cyan/dividend,
-                    M = cmykColors[0].magenta / dividend,
-                    Y = cmykColors[0].yellow / dividend,
-                    K = cmykColors[0].black / dividend
-                };
+            {
+                C = cmykColors[0].cyan / dividend,
+                M = cmykColors[0].magenta / dividend,
+                Y = cmykColors[0].yellow / dividend,
+                K = cmykColors[0].black / dividend
+            };
         }
 
-        public static void Test()
+        public static ICmyk TranslateColor(IRgb rgb, Uri cmykProfile)
         {
-            bool success;
-
-            StringBuilder profileName = new StringBuilder(256);
-            uint size = (uint)profileName.Capacity * 2;
-            success = GetStandardColorSpaceProfile(0, LogicalColorSpace.sRGB, profileName, ref size);
-
-            ProfileFilename sRGBFilename = new ProfileFilename(profileName.ToString());
-            IntPtr hSRGBProfile = OpenColorProfile(sRGBFilename, ProfileRead, FileShare.Read, CreateDisposition.OpenExisting);
-
-            ProfileFilename isoCoatedFilename = new ProfileFilename(@"C:\Users\me\Documents\ISOcoated_v2_300_eci.icc");
-            IntPtr hIsoCoatedProfile = OpenColorProfile(isoCoatedFilename, ProfileRead, FileShare.Read, CreateDisposition.OpenExisting);
-
-            IntPtr[] profiles = new IntPtr[] { hSRGBProfile, hIsoCoatedProfile };
-            uint[] intents = new uint[] { IntentPerceptual };
-            IntPtr transform = CreateMultiProfileTransform(profiles, 2, intents, 1, ColorTransformMode.BestMode, IndexDontCare);
-
-            RGBColor[] rgbColors = new RGBColor[1];
-            rgbColors[0] = new RGBColor();
-            CMYKColor[] cmykColors = new CMYKColor[1];
-            cmykColors[0] = new CMYKColor();
-
-            rgbColors[0].red = 30204;
-            rgbColors[0].green = 4420;
-            rgbColors[0].blue = 60300;
-
-            success = TranslateColors(transform, rgbColors, 1, ColorType.RGB, cmykColors, ColorType.CMYK);
-
-            success = DeleteColorTransform(transform);
-
-            success = CloseColorProfile(hSRGBProfile);
-            success = CloseColorProfile(hIsoCoatedProfile);
+            var profileName = new StringBuilder(256);
+            var size = (uint)profileName.Capacity * 2;
+            GetStandardColorSpaceProfile(0, LogicalColorSpace.sRGB, profileName, ref size);
+            var rgbFilename = new ProfileFilename(profileName.ToString());
+            return TranslateColor(rgb, cmykProfile, new Uri(rgbFilename.profileData));
         }
     }
-
 }
