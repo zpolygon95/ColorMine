@@ -4,9 +4,9 @@ using ColorMine.ColorSpaces.Conversions.Utility;
 
 namespace ColorMine.ColorSpaces.Conversions
 {
-    internal static class CmykConverter
+    public static class CmykConverter
     {
-        internal static void ToColorSpace(IRgb color, ICmyk item)
+        public static void ToColorSpace(IRgb color, ICmyk item)
         {
             var cmy = new Cmy();
             cmy.Initialize(color);
@@ -31,16 +31,37 @@ namespace ColorMine.ColorSpaces.Conversions
             }
         }
 
-        internal static void ToColorSpace(IRgb color, ICmyk item, Uri profile)
+        public static void ToColorSpace(IRgb color, ICmyk item, Uri cmykProfile)
         {
-            var cmyk = WindowsColorSystem.TranslateColor(profile, color);
+            if (cmykProfile == null)
+            {
+                ToColorSpace(color, item);
+                return;
+            }
+            
+            var cmyk = WindowsColorSystem.TranslateColor(color, cmykProfile);
             item.C = cmyk.C;
             item.M = cmyk.M;
             item.Y = cmyk.Y;
             item.K = cmyk.K;
         }
 
-        internal static IRgb ToColor(ICmyk item)
+        public static void ToColorSpace(IRgb color, ICmyk item, Uri cmykProfile, Uri rgbProfile)
+        {
+            if (rgbProfile == null)
+            {
+                ToColorSpace(color, item, cmykProfile);
+                return;
+            }
+
+            var cmyk = WindowsColorSystem.TranslateColor(color, cmykProfile, rgbProfile);
+            item.C = cmyk.C;
+            item.M = cmyk.M;
+            item.Y = cmyk.Y;
+            item.K = cmyk.K;
+        }
+
+        public static IRgb ToColor(ICmyk item)
         {
             var cmy = new Cmy
                 {
@@ -52,7 +73,7 @@ namespace ColorMine.ColorSpaces.Conversions
             return cmy.ToRgb();
         }
 
-        internal static IRgb ToColor(ICmyk item, Uri profile)
+        public static IRgb ToColor(ICmyk item, Uri profile)
         {
             var points = new[] { (float)item.C, (float)item.M, (float)item.Y, (float)item.K };
             var color = Color.FromValues(points, profile);
