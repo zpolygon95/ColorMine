@@ -26,12 +26,22 @@ var myYxy = new Xyz { Y1 = .1124, X = .22, Y2 = .14 }
 var myHsl = myYxy.To<Hsl>();
 ```
 
+Cmyk conversion also supports profiles
+```c#
+var myCmyk = myRgb
+    .WithProfile("~/JapanWebCoated.icc")
+    .To<Cmyk>();
+var myHunterLab = myCmyk
+    .WithProfile("~/JapanWebCoated.icc")
+    .To<HunterLab>();
+```
+
 Online example at http://colormine.org/color-converter
 
 
 ## Delta-E
 
-Delta-E calculations take and compare colors in any of the supported formates.
+Delta-E calculations take and compare colors in any of the supported formats.
 
 ### [CIE76](http://colormine.org/delta-e-calculator/)
 ```c#
@@ -43,9 +53,14 @@ double deltaE = myRgb.Compare(myCmy,new Cie1976Comparison());
 double deltaE = myXyz.Compare(myLab,new CmcComparison(lightness: 2, chroma: 1));
 ```
 
-### [CIE94](http://colormine.org/delta-e-calculator/Cie94)
+### [CIE94](http://colormine.org/delta-e-calculator/cie94)
 ```c#
 double deltaE = myYxy.Compare(myHsl,new Cie94(Cie94Comparison.Application.GraphicArts));
+```
+
+### [CIE2000](http://colormine.org/delta-e-calculator/cie2000)
+```c#
+double deltaE = myHunterLab.Compare(myLuv, new CieDe2000());
 ```
 
 Note: Delta-e calculations are [quasimetric](http://en.wikipedia.org/wiki/Quasimetric#Quasimetrics), the result of comparing color a to b isn't always equal to comparing color b to a...but it will probably be pretty close!
@@ -70,3 +85,4 @@ Note: Delta-e calculations are [quasimetric](http://en.wikipedia.org/wiki/Quasim
 * CIE76
 * CMC l:c
 * CIE94
+* CIE2000
