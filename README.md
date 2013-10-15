@@ -26,6 +26,16 @@ var myYxy = new Xyz { Y1 = .1124, X = .22, Y2 = .14 }
 var myHsl = myYxy.To<Hsl>();
 ```
 
+Cmyk conversion also supports profiles
+```c#
+var myCmyk = myRgb
+    .WithProfile("~/JapanWebCoated.icc")
+    .To<Cmyk>();
+var myHunterLab = myCmyk
+    .WithProfile("~/JapanWebCoated.icc")
+    .To<HunterLab>();
+```
+
 Online example at http://colormine.org/color-converter
 
 
