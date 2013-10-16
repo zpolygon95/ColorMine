@@ -51,23 +51,24 @@ namespace ColorMine.ColorSpaces.Comparisons
             var deltaA = labA.A - labB.A;
             var deltaB = labA.B - labB.B;
 
-            var c1 = Math.Sqrt(Math.Pow(labA.A, 2) + Math.Pow(labA.B, 2));
-            var c2 = Math.Sqrt(Math.Pow(labB.A, 2) + Math.Pow(labB.B, 2));
+            var c1 = Math.Sqrt(labA.A * labA.A + labA.B * labA.B);
+            var c2 = Math.Sqrt(labB.A * labB.A + labB.B * labB.B);
             var deltaC = c1 - c2;
 
-            var deltaH = Math.Pow(deltaA,2) + Math.Pow(deltaB,2) - Math.Pow(deltaC,2);
+            var deltaH = deltaA * deltaA + deltaB * deltaB - deltaC * deltaC;
             deltaH = deltaH < 0 ? 0 : Math.Sqrt(deltaH);
 
             const double sl = 1.0;
             const double kc = 1.0;
             const double kh = 1.0;
 
-            var sc = 1.0 + Constants.K1*c1;
-            var sh = 1.0 + Constants.K2*c1;
+            var sc = 1.0 + Constants.K1 * c1;
+            var sh = 1.0 + Constants.K2 * c1;
 
-            var i = Math.Pow(deltaL/(Constants.Kl*sl), 2) +
-                    Math.Pow(deltaC/(kc*sc), 2) +
-                    Math.Pow(deltaH/(kh*sh), 2);
+            var deltaLKlsl = deltaL / (Constants.Kl * sl);
+            var deltaCkcsc = deltaC / (kc * sc);
+            var deltaHkhsh = deltaH / (kh * sh);
+            var i = deltaLKlsl * deltaLKlsl + deltaCkcsc * deltaCkcsc + deltaHkhsh * deltaHkhsh;
             return i < 0 ? 0 : Math.Sqrt(i);
         }
 

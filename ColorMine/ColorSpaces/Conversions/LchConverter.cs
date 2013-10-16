@@ -16,20 +16,20 @@ namespace ColorMine.ColorSpaces.Conversions
             }
             else
             {
-                h = 360 - (Math.Abs(h)/Math.PI)*180.0;
+                h = 360 - (Math.Abs(h) / Math.PI) * 180.0;
             }
 
             if (h < 0)
             {
                 h += 360.0;
             }
-            else if(h >= 360)
+            else if (h >= 360)
             {
                 h -= 360.0;
             }
 
             item.L = lab.L;
-            item.C = Math.Sqrt(Math.Pow(lab.A,2) + Math.Pow(lab.B,2));
+            item.C = Math.Sqrt(lab.A * lab.A + lab.B * lab.B);
             item.H = h;
         }
 
@@ -44,6 +44,5 @@ namespace ColorMine.ColorSpaces.Conversions
                 };
             return lab.To<Rgb>();
         }
-
     }
 }
