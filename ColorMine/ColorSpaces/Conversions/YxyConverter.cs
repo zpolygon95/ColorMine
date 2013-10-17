@@ -22,7 +22,7 @@ namespace ColorMine.ColorSpaces.Conversions
         {
             var xyz = new Xyz
                 {
-                    X = item.X*(item.Y1/item.Y2),
+                    X = item.X * (item.Y1 / item.Y2),
                     Y = item.Y1,
                     Z = (1.0 - item.X - item.Y2) * (item.Y1 / item.Y2)
                 };

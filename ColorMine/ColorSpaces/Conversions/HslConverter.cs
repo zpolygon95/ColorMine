@@ -16,7 +16,7 @@ namespace ColorMine.ColorSpaces.Conversions
 
         internal static IRgb ToColor(IHsl item)
         {
-            var rangedH = item.H/360.0;
+            var rangedH = item.H / 360.0;
             var r = 0.0;
             var g = 0.0;
             var b = 0.0;
@@ -31,12 +31,12 @@ namespace ColorMine.ColorSpaces.Conversions
                 }
                 else
                 {
-                    var temp2 = (l < 0.5) ? l*(1.0 + s) : l + s - (l*s);
-                    var temp1 = 2.0*l - temp2;
+                    var temp2 = (l < 0.5) ? l * (1.0 + s) : l + s - (l * s);
+                    var temp1 = 2.0 * l - temp2;
 
-                    r = GetColorComponent(temp1, temp2, rangedH + 1.0/3.0);
+                    r = GetColorComponent(temp1, temp2, rangedH + 1.0 / 3.0);
                     g = GetColorComponent(temp1, temp2, rangedH);
-                    b = GetColorComponent(temp1, temp2, rangedH - 1.0/3.0);
+                    b = GetColorComponent(temp1, temp2, rangedH - 1.0 / 3.0);
                 }
             }
             return new Rgb
@@ -50,9 +50,9 @@ namespace ColorMine.ColorSpaces.Conversions
         private static double GetColorComponent(double temp1, double temp2, double temp3)
         {
             temp3 = MoveIntoRange(temp3);
-            if (temp3 < 1.0/6.0)
+            if (temp3 < 1.0 / 6.0)
             {
-                return temp1 + (temp2 - temp1)*6.0*temp3;
+                return temp1 + (temp2 - temp1) * 6.0 * temp3;
             }
 
             if (temp3 < 0.5)
@@ -60,9 +60,9 @@ namespace ColorMine.ColorSpaces.Conversions
                 return temp2;
             }
 
-            if (temp3 < 2.0/3.0)
+            if (temp3 < 2.0 / 3.0)
             {
-                return temp1 + ((temp2 - temp1)*((2.0/3.0) - temp3)*6.0);
+                return temp1 + ((temp2 - temp1) * ((2.0 / 3.0) - temp3) * 6.0);
             }
 
             return temp1;

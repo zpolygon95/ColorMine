@@ -63,9 +63,9 @@ namespace ColorMine.ColorSpaces
         /// <returns></returns>
         public T To<T>() where T : IColorSpace, new()
         {
-            if (typeof (T) == GetType())
+            if (typeof(T) == GetType())
             {
-                return (T) MemberwiseClone();
+                return (T)MemberwiseClone();
             }
 
             var newColorSpace = new T();

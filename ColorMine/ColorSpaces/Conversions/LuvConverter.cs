@@ -10,7 +10,7 @@ namespace ColorMine.ColorSpaces.Conversions
             var white = XyzConverter.WhiteReference;
             xyz.Initialize(color);
 
-            var y = xyz.Y/XyzConverter.WhiteReference.Y;
+            var y = xyz.Y / XyzConverter.WhiteReference.Y;
             item.L = y > XyzConverter.Epsilon ? 116.0 * XyzConverter.CubicRoot(y) - 16.0 : XyzConverter.Kappa * y;
 
             var targetDenominator = GetDenominator(xyz);
@@ -31,13 +31,14 @@ namespace ColorMine.ColorSpaces.Conversions
             var uPrime = (4.0 * white.X) / GetDenominator(white);
             var vPrime = (9.0 * white.Y) / GetDenominator(white);
             var a = (1.0 / 3.0) * ((52.0 * item.L) / (item.U + 13 * item.L * uPrime) - 1.0);
-            var y = item.L > XyzConverter.Kappa*XyzConverter.Epsilon
-                        ? Math.Pow((item.L + 16.0)/116.0, 3)
-                        : item.L/XyzConverter.Kappa;
+            var imteL_16_116 = (item.L + 16.0) / 116.0;
+            var y = item.L > XyzConverter.Kappa * XyzConverter.Epsilon
+                        ? imteL_16_116 * imteL_16_116 * imteL_16_116
+                        : item.L / XyzConverter.Kappa;
             var b = -5.0 * y;
             var d = y * ((39.0 * item.L) / (item.V + 13.0 * item.L * vPrime) - 5.0);
-            var x = (d - b)/(a - c);
-            var z = x*a + b;
+            var x = (d - b) / (a - c);
+            var z = x * a + b;
             var xyz = new Xyz
                 {
                     X = 100 * x,
