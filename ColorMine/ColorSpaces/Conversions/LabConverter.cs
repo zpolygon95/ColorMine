@@ -14,9 +14,9 @@ namespace ColorMine.ColorSpaces.Conversions
             var y = PivotXyz(xyz.Y / white.Y);
             var z = PivotXyz(xyz.Z / white.Z);
 
-            item.L = Math.Max(0,116*y - 16);
-            item.A = 500*(x - y);
-            item.B = 200*(y - z);
+            item.L = Math.Max(0, 116 * y - 16);
+            item.A = 500 * (x - y);
+            item.B = 200 * (y - z);
         }
 
         internal static IRgb ToColor(ILab item)
@@ -26,11 +26,13 @@ namespace ColorMine.ColorSpaces.Conversions
             var z = y - item.B / 200.0;
 
             var white = XyzConverter.WhiteReference;
+            var x3 = x * x * x;
+            var z3 = z * z * z;
             var xyz = new Xyz
                 {
-                    X = white.X * (Math.Pow(x, 3) > XyzConverter.Epsilon ? Math.Pow(x, 3) : (x - 16.0 / 116.0) / 7.787),
+                    X = white.X * (x3 > XyzConverter.Epsilon ? x3 : (x - 16.0 / 116.0) / 7.787),
                     Y = white.Y * (item.L > (XyzConverter.Kappa * XyzConverter.Epsilon) ? Math.Pow(((item.L + 16.0) / 116.0), 3) : item.L / XyzConverter.Kappa),
-                    Z = white.Z * (Math.Pow(z, 3) > XyzConverter.Epsilon ? Math.Pow(z, 3) : (z - 16.0 / 116.0) / 7.787)
+                    Z = white.Z * (z3 > XyzConverter.Epsilon ? z3 : (z - 16.0 / 116.0) / 7.787)
                 };
 
             return xyz.ToRgb();
@@ -43,7 +45,7 @@ namespace ColorMine.ColorSpaces.Conversions
 
         private static double CubicRoot(double n)
         {
-            return Math.Pow(n, (1.0/3.0));
+            return Math.Pow(n, 1.0 / 3.0);
         }
     }
 }
