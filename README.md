@@ -5,7 +5,9 @@ MIT Licensed .Net library that makes converting between color spaces and compari
 
 ## Getting Started
 
-ColorMine is available as a nuget package so you can install by searching for "ColorMine" in the "Manage Packages" menu, or simply type "Install-Package ColorMine" in the nuget console.
+ColorMine is available as a nuget package so you can install by searching for "ColorMine" in the "Manage Nuget Packages" menu, or run the following command in the Package Manager Console:
+
+*PM> Install-Package ColorMine*
 
 ## Color Conversions
 
