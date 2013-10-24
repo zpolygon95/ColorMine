@@ -57,13 +57,13 @@
     <Compile Include="ColorSpaces\Conversions\CmyConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\CmykConverter.cs" />
     <Compile Include="ColorSpaces\ColorSpaceWithProfile.cs" />
+    <Compile Include="ColorSpaces\Conversions\CmykProfileConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HsbConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HsvConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HslConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\HunterLabConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\LchConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\LuvConverter.cs" />
-    <Compile Include="ColorSpaces\Conversions\WindowsColorSystem.cs" />
     <Compile Include="ColorSpaces\Conversions\YxyConverter.cs" />
     <Compile Include="ColorSpaces\Conversions\Utility\DoubleExtension.cs" />
     <Compile Include="ColorSpaces\Conversions\LabConverter.cs" />

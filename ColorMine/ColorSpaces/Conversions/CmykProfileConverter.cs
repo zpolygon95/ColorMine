@@ -8,7 +8,7 @@ namespace ColorMine.ColorSpaces.Conversions
     // Question/Answer: http://stackoverflow.com/questions/5237104/c-sharp-convert-Rgb-value-to-cmyk-using-an-icc-profile/5251318#5251318
     // Submitter: Codo http://stackoverflow.com/users/413337/codo
     // License: http://creativecommons.org/licenses/by-sa/3.0/
-    internal class WindowsColorSystem
+    internal class CmykProfileConverter
     {
         internal static ICmyk TranslateColor(IRgb rgb, Uri cmykProfile, Uri rgbProfile)
         {
