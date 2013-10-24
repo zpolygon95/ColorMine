@@ -15,8 +15,8 @@ namespace ColorMine.ColorSpaces.Conversions
             var min = Min(color.R, Min(color.G, color.B));
 
             item.H = Color.FromArgb(255, (int)color.R, (int)color.G, (int)color.B).GetHue();
-            item.S = (max <= 0) ? 0 : 1d - (1d*min/max);
-            item.V = max/255d;
+            item.S = (max <= 0) ? 0 : 1d - (1d * min / max);
+            item.V = max / 255d;
         }
 
         internal static IRgb ToColor(IHsv item)
@@ -47,7 +47,7 @@ namespace ColorMine.ColorSpaces.Conversions
 
         private static IRgb NewRgb(double r, double g, double b)
         {
-            return new Rgb {R = r, G = g, B = b};
+            return new Rgb { R = r, G = g, B = b };
         }
 
         private static double Max(double a, double b)

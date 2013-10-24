@@ -17,14 +17,15 @@ namespace ColorMine.ColorSpaces.Conversions
         internal static IRgb ToColor(IHunterLab item)
         {
             var x = (item.A / 17.5) * (item.L / 10.0);
-            var y = Math.Pow(item.L/10.0,2);
-            var z = item.B/7.0*item.L/10.0;
+            var itemL_10 = item.L / 10.0;
+            var y = itemL_10 * itemL_10;
+            var z = item.B / 7.0 * item.L / 10.0;
 
             var xyz = new Xyz
                 {
-                    X = (x + y)/1.02,
+                    X = (x + y) / 1.02,
                     Y = y,
-                    Z = -(z - y)/.847
+                    Z = -(z - y) / .847
                 };
             return xyz.To<Rgb>();
         }

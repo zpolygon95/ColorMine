@@ -4,9 +4,9 @@
     {
         internal static void ToColorSpace(IRgb color, ICmy item)
         {
-            item.C = 1 - (color.R / 255.0);
-            item.M = 1 - (color.G / 255.0);
-            item.Y = 1 - (color.B / 255.0);
+            item.C = 1 - color.R / 255.0;
+            item.M = 1 - color.G / 255.0;
+            item.Y = 1 - color.B / 255.0;
         }
 
         internal static IRgb ToColor(ICmy item)
