@@ -21,7 +21,7 @@ namespace ColorMine.ColorSpaces.Comparisons
 
         private static double Distance(double a, double b)
         {
-            return Math.Pow(a - b, 2);
+            return (a - b) * (a - b);
         }
     }
 }
