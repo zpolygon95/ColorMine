@@ -39,7 +39,7 @@ namespace ColorMine.ColorSpaces.Conversions
                 return;
             }
             
-            var cmyk = WindowsColorSystem.TranslateColor(color, cmykProfile);
+            var cmyk = CmykProfileConverter.TranslateColor(color, cmykProfile);
             item.C = cmyk.C;
             item.M = cmyk.M;
             item.Y = cmyk.Y;
@@ -54,7 +54,7 @@ namespace ColorMine.ColorSpaces.Conversions
                 return;
             }
 
-            var cmyk = WindowsColorSystem.TranslateColor(color, cmykProfile, rgbProfile);
+            var cmyk = CmykProfileConverter.TranslateColor(color, cmykProfile, rgbProfile);
             item.C = cmyk.C;
             item.M = cmyk.M;
             item.Y = cmyk.Y;
