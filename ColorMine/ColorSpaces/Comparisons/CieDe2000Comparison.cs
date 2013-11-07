@@ -29,8 +29,8 @@ namespace ColorMine.ColorSpaces.Comparisons
             var cBarInPower7 = cBar * cBar * cBar;
             cBarInPower7 *= cBarInPower7 * cBar;
             var g = (1 - Math.Sqrt(cBarInPower7 / (cBarInPower7 + 6103515625))); // 25 ^ 7
-            var aPrime1 = lab1.A * (lab1.A / 2.0) * g;
-            var aPrime2 = lab2.A * (lab2.A / 2.0) * g;
+            var aPrime1 = lab1.A + (lab1.A / 2.0) * g;
+            var aPrime2 = lab2.A + (lab2.A / 2.0) * g;
 
             var cPrime1 = Math.Sqrt(aPrime1 * aPrime1 + lab1.B * lab1.B);
             var cPrime2 = Math.Sqrt(aPrime2 * aPrime2 + lab2.B * lab2.B);
