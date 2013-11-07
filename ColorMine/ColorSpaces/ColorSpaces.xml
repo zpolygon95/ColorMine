@@ -9,9 +9,9 @@
   </colorSpace>
   <colorSpace name="Xyz">
     <dataPoints>
-      <dataPoint label="X" min="0" max="1"/>
-      <dataPoint label="Y" min="0" max="1"/>
-      <dataPoint label="Z" min="0" max="1"/>
+      <dataPoint label="X" min="0" max="100"/>
+      <dataPoint label="Y" min="0" max="100"/>
+      <dataPoint label="Z" min="0" max="100"/>
     </dataPoints>
   </colorSpace>
   <colorSpace name="Hsl">
