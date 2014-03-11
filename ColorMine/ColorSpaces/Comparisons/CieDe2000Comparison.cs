@@ -10,87 +10,119 @@ namespace ColorMine.ColorSpaces.Comparisons
         /// <summary>
         /// Calculates the DE2000 delta-e value: http://en.wikipedia.org/wiki/Color_difference#CIEDE2000
         /// </summary>
-        public double Compare(IColorSpace colorA, IColorSpace colorB)
+        public double Compare(IColorSpace c1, IColorSpace c2)
         {
-            const double kl = 1.0;
-            const double kc = 1.0;
-            const double kh = 1.0;
+            //Set weighting factors to 1
+            double k_L = 1.0d;
+            double k_C = 1.0d;
+            double k_H = 1.0d;
 
-            var lab1 = colorA.To<Lab>();
-            var lab2 = colorB.To<Lab>();
 
-            #region Get deltaLPrime, deltaCPrime, deltaHPrime
-            var lBar = (lab1.L + lab2.L) / 2.0;
+            //Change Color Space to L*a*b:
+            Lab lab1 = c1.To<Lab>();
+            Lab lab2 = c2.To<Lab>();
 
-            var c1 = Math.Sqrt(lab1.A * lab1.A + lab1.B * lab1.B);
-            var c2 = Math.Sqrt(lab2.A * lab2.A + lab2.B * lab2.B);
-            var cBar = (c1 + c2) / 2.0;
+            //Calculate Cprime1, Cprime2, Cabbar
+            double c_star_1_ab = Math.Sqrt(lab1.A * lab1.A + lab1.B * lab1.B);
+            double c_star_2_ab = Math.Sqrt(lab2.A * lab2.A + lab2.B * lab2.B);
+            double c_star_average_ab = (c_star_1_ab + c_star_2_ab) / 2;
 
-            var cBarInPower7 = cBar * cBar * cBar;
-            cBarInPower7 *= cBarInPower7 * cBar;
-            var g = (1 - Math.Sqrt(cBarInPower7 / (cBarInPower7 + 6103515625))); // 25 ^ 7
-            var aPrime1 = lab1.A + (lab1.A / 2.0) * g;
-            var aPrime2 = lab2.A + (lab2.A / 2.0) * g;
+            double c_star_average_ab_pot7 = c_star_average_ab * c_star_average_ab * c_star_average_ab;
+            c_star_average_ab_pot7 *= c_star_average_ab_pot7 * c_star_average_ab;
 
-            var cPrime1 = Math.Sqrt(aPrime1 * aPrime1 + lab1.B * lab1.B);
-            var cPrime2 = Math.Sqrt(aPrime2 * aPrime2 + lab2.B * lab2.B);
-            var cBarPrime = (cPrime1 + cPrime2) / 2.0;
+            double G = 0.5d * (1 - Math.Sqrt(c_star_average_ab_pot7 / (c_star_average_ab_pot7 + 6103515625))); //25^7
+            double a1_prime = (1 + G) * lab1.A;
+            double a2_prime = (1 + G) * lab2.A;
 
-            var hPrime1 = Math.Atan2(lab1.B, aPrime1) % 360;
-            var hPrime2 = Math.Atan2(lab2.B, aPrime2) % 360;
+            double C_prime_1 = Math.Sqrt(a1_prime * a1_prime + lab1.B * lab1.B);
+            double C_prime_2 = Math.Sqrt(a2_prime * a2_prime + lab2.B * lab2.B);
+            //Angles in Degree.
+            double h_prime_1 = ((Math.Atan2(lab1.B, a1_prime) * 180d / Math.PI) + 360) % 360d;
+            double h_prime_2 = ((Math.Atan2(lab2.B, a2_prime) * 180d / Math.PI) + 360) % 360d;
 
-            var hBar = Math.Abs(hPrime1 - hPrime2);
+            double delta_L_prime = lab2.L - lab1.L;
+            double delta_C_prime = C_prime_2 - C_prime_1;
 
-            double deltaHPrime;
-            if (hBar <= 180)
-            {
-                deltaHPrime = hPrime2 - hPrime1;
-            }
-            else if (hBar > 180 && hPrime2 <= hPrime1)
-            {
-                deltaHPrime = hPrime2 - hPrime1 + 360.0;
-            }
+            double h_bar = Math.Abs(h_prime_1 - h_prime_2);
+            double delta_h_prime;
+            if (C_prime_1 * C_prime_2 == 0) delta_h_prime = 0;
             else
             {
-                deltaHPrime = hPrime2 - hPrime1 - 360.0;
+                if (h_bar <= 180d)
+                {
+                    delta_h_prime = h_prime_2 - h_prime_1;
+                }
+                else if (h_bar > 180d && h_prime_2 <= h_prime_1)
+                {
+                    delta_h_prime = h_prime_2 - h_prime_1 + 360.0;
+                }
+                else
+                {
+                    delta_h_prime = h_prime_2 - h_prime_1 - 360.0;
+                }
             }
+            double delta_H_prime = 2 * Math.Sqrt(C_prime_1 * C_prime_2) * Math.Sin(delta_h_prime * Math.PI / 360d);
 
-            var deltaLPrime = lab2.L - lab1.L;
-            var deltaCPrime = cPrime2 - cPrime1;
-            deltaHPrime = 2 * Math.Sqrt(cPrime1 * cPrime2) * Math.Sin(deltaHPrime / 2.0);
-            #endregion Get deltaLPrime, deltaCPrime, deltaHPrime
+            // Calculate CIEDE2000
+            double L_prime_average = (lab1.L + lab2.L) / 2d;
+            double C_prime_average = (C_prime_1 + C_prime_2) / 2d;
 
-            var hBarPrime = hBar > 180
-                                     ? (hPrime1 + hPrime2 + 360) / 2.0
-                                     : (hPrime1 + hPrime2) / 2.0;
+            //Calculate h_prime_average
 
-            var t = 1
-                    - .17 * Math.Cos(hBarPrime - 30)
-                    + .24 * Math.Cos(2 * hBarPrime)
-                    + .32 * Math.Cos(3 * hBarPrime + 6)
-                    - .2 * Math.Cos(4 * hBarPrime - 63);
+            double h_prime_average;
+            if (C_prime_1 * C_prime_2 == 0) h_prime_average = 0;
+            else
+            {
+                if (h_bar <= 180d)
+                {
+                    h_prime_average = (h_prime_1 + h_prime_2) / 2;
+                }
+                else if (h_bar > 180d && (h_prime_1 + h_prime_2) < 360d)
+                {
+                    h_prime_average = (h_prime_1 + h_prime_2 + 360d) / 2;
+                }
+                else
+                {
+                    h_prime_average = (h_prime_1 + h_prime_2 - 360d) / 2;
+                }
+            }
+            double L_prime_average_minus_50_square = (L_prime_average - 50);
+            L_prime_average_minus_50_square *= L_prime_average_minus_50_square;
 
-            double lBarMinus50Sqr = (lBar - 50) * (lBar - 50);
-            var sl = 1 + (.015 * lBarMinus50Sqr) / Math.Sqrt(20 + lBarMinus50Sqr);
-            var sc = 1 + .045 * cBarPrime;
-            var sh = 1 + .015 * cBarPrime * t;
+            double S_L = 1 + ((.015d * L_prime_average_minus_50_square) / Math.Sqrt(20 + L_prime_average_minus_50_square));
+            double S_C = 1 + .045d * C_prime_average;
+            double T = 1
+                - .17 * Math.Cos(DegToRad(h_prime_average - 30))
+                + .24 * Math.Cos(DegToRad(h_prime_average * 2))
+                + .32 * Math.Cos(DegToRad(h_prime_average * 3 + 6))
+                - .2 * Math.Cos(DegToRad(h_prime_average * 4 - 63));
+            double S_H = 1 + .015 * T * C_prime_average;
+            double h_prime_average_minus_275_div_25_square = (h_prime_average - 275) / (25);
+            h_prime_average_minus_275_div_25_square *= h_prime_average_minus_275_div_25_square;
+            double delta_theta = 30 * Math.Exp(-h_prime_average_minus_275_div_25_square);
 
-            double cBarPrimeInPower7 = cBarPrime * cBarPrime * cBarPrime;
-            cBarPrimeInPower7 *= cBarPrimeInPower7 * cBarPrime;
-            var rt = -2
-                     * Math.Sqrt(cBarPrimeInPower7 / (cBarPrimeInPower7 + 6103515625)) // 25 ^ 7
-                     * Math.Sin(60.0 * Math.Exp(-((hBarPrime - 275.0) / 25.0)));
+            double C_prime_average_pot_7 = C_prime_average * C_prime_average * C_prime_average;
+            C_prime_average_pot_7 *= C_prime_average_pot_7 * C_prime_average;
+            double R_C = 2 * Math.Sqrt(C_prime_average_pot_7 / (C_prime_average_pot_7 + 6103515625));
 
-            double deltaLPrimeDivklsl = deltaLPrime / (kl * sl);
-            double deltaCPrimeDivkcsc = deltaCPrime / (kc * sc);
-            double deltaHPrimeDivkhsh = deltaHPrime / (kh * sh);
-            var deltaE = Math.Sqrt(
-                deltaLPrimeDivklsl * deltaLPrimeDivklsl +
-                deltaCPrimeDivkcsc * deltaCPrimeDivkcsc +
-                deltaHPrimeDivkhsh * deltaHPrimeDivkhsh +
-                rt * (deltaCPrime / (kc * kh)) * (deltaHPrime / (kh * sh)));
+            double R_T = -Math.Sin(DegToRad(2 * delta_theta)) * R_C;
 
-            return deltaE;
+            double delta_L_prime_div_k_L_S_L = delta_L_prime / (S_L * k_L);
+            double delta_C_prime_div_k_C_S_C = delta_C_prime / (S_C * k_C);
+            double delta_H_prime_div_k_H_S_H = delta_H_prime / (S_H * k_H);
+
+            double CIEDE2000 = Math.Sqrt(
+                delta_L_prime_div_k_L_S_L * delta_L_prime_div_k_L_S_L
+                + delta_C_prime_div_k_C_S_C * delta_C_prime_div_k_C_S_C
+                + delta_H_prime_div_k_H_S_H * delta_H_prime_div_k_H_S_H
+                + R_T * delta_C_prime_div_k_C_S_C * delta_H_prime_div_k_H_S_H
+                );
+
+            return CIEDE2000;
+        }
+        private double DegToRad(double degrees)
+        {
+            return degrees * Math.PI / 180;
         }
     }
 }
