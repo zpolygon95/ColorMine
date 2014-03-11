@@ -17,25 +17,52 @@ namespace ColorMine.Test.ColorSpaces.Comparisons
                 Assert.IsTrue(expectedValue.BasicallyEqualTo(actualValue), expectedValue + " != " + actualValue);
             }
 
+            /// <summary>
+            /// CIE2000 Test data courtesy of Gaurav Sharma http://www.ece.rochester.edu/~gsharma/ciede2000/
+            /// </summary>
             [TestMethod]
-            public void ReturnsKnownValueForRedAndMaroon2()
+            public void ReturnsKnownValueForKnownColors()
             {
                 // Todo, should be mocking!!
                 var a = new Lab
                 {
-                    L = 24.8290,
-                    A = 60.0930,
-                    B = 38.1800
+                    L = 50.0000,
+                    A = 2.6772,
+                    B = -79.7751
                 };
 
                 var b = new Lab
                 {
-                    L = 53.2300,
-                    A = 80.1090,
-                    B = 67.2200
+                    L = 50.0000,
+                    A = 0.0000,
+                    B = -82.7485
                 };
 
-                ReturnsExpectedValueForKnownInput(28.2270, a, b);
+                ReturnsExpectedValueForKnownInput(2.0425, a, b);
+            }
+
+            /// <summary>
+            /// CIE2000 Test data courtesy of Gaurav Sharma http://www.ece.rochester.edu/~gsharma/ciede2000/
+            /// </summary>
+            [TestMethod]
+            public void ReturnsKnownValueForKnownValues()
+            {
+                // Todo, should be mocking!!
+                var a = new Lab
+                {
+                    L = 2.0776,
+                    A = 0.0795,
+                    B = -1.1350
+                };
+
+                var b = new Lab
+                {
+                    L = 0.9033,
+                    A = -0.0636,
+                    B = -0.5514
+                };
+
+                ReturnsExpectedValueForKnownInput(0.9082, a, b);
             }
         }
     }
