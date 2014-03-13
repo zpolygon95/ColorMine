@@ -4,11 +4,13 @@ namespace ColorMine.ColorSpaces.Comparisons
 {
     /// <summary>
     /// Implements the DE2000 method of delta-e: http://en.wikipedia.org/wiki/Color_difference#CIEDE2000
+    /// Correct implementation provided courtesy of Jonathan Hofinger, jaytar42
     /// </summary>
     public class CieDe2000Comparison : IColorSpaceComparison
     {
         /// <summary>
         /// Calculates the DE2000 delta-e value: http://en.wikipedia.org/wiki/Color_difference#CIEDE2000
+        /// Correct implementation provided courtesy of Jonathan Hofinger, jaytar42
         /// </summary>
         public double Compare(IColorSpace c1, IColorSpace c2)
         {
