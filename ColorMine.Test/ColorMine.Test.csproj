@@ -36,10 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Lib\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
   </ItemGroup>
@@ -62,7 +58,7 @@
       <DependentUpon>ColorSpaceTest.tt</DependentUpon>
     </Compile>
     <Compile Include="ColorSpaces\Comparisons\Cie94ComparisonTest.cs" />
-    <Compile Include="ColorSpaces\Comparisons\CieDe2000Test.cs" />
+    <Compile Include="ColorSpaces\Comparisons\CieDe2000ComparisonTest.cs" />
     <Compile Include="ColorSpaces\Comparisons\CmcComparisonTest.cs" />
     <Compile Include="ColorSpaces\ConversionTests.cs">
       <AutoGen>True</AutoGen>
@@ -80,7 +76,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ColorSpaces\ConversionResults.xml">
+    <Content Include="TestData\ConversionResults.xml">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -91,6 +87,9 @@
     <None Include="ColorSpaces\ColorSpaceTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ColorSpaceTest.cs</LastGenOutput>
+    </None>
+    <None Include="TestData\CieDe2000TestData.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ColorSpaces\ConversionTests.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
