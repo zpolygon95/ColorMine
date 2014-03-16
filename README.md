@@ -67,6 +67,8 @@ double deltaE = myYxy.Compare(myHsl,new Cie94(Cie94Comparison.Application.Graphi
 double deltaE = myHunterLab.Compare(myLuv, new CieDe2000());
 ```
 
+*Huge thanks to Jonathan Hofinger for correct implementation of CieDe2000 and to Gaurav Sharma for test data.*
+
 Note: Delta-e calculations are [quasimetric](http://en.wikipedia.org/wiki/Quasimetric#Quasimetrics), the result of comparing color a to b isn't always equal to comparing color b to a...but it will probably be pretty close!
 
 ***
