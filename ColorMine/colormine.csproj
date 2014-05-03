@@ -33,10 +33,11 @@
     <IntermediateOutputPath>C:\Users\joe\AppData\Local\Temp\vs4429.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>colormine.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -81,7 +82,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="colormine.pfx" />
     <None Include="ColorSpaces\ColorSpaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ColorSpaces.cs</LastGenOutput>

@@ -37,6 +37,13 @@
     <WarningLevel>4</WarningLevel>
     <IntermediateOutputPath>C:\Users\joe\AppData\Local\Temp\vs5011.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
