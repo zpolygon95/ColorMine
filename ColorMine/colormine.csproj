@@ -82,6 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ColorMine.nuspec" />
     <None Include="ColorSpaces\ColorSpaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ColorSpaces.cs</LastGenOutput>
