@@ -8,7 +8,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#
 	var document = new XmlDocument();
-	var file = Host.ResolvePath("ConversionResults.xml");
+	var file = Host.ResolvePath("..\\TestData\\ConversionResults.xml");
 	document.Load(file);
 	var colors = document.SelectNodes("ConversionResults/*");
 #>

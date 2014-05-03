@@ -53,16 +53,6 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
-            public void WhiteRgbToHsb()
-            {
-				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
-				var expectedColor = new Hsb { H = 0, S = 0, B = 100, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
             public void WhiteRgbToLab()
             {
 				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
@@ -133,6 +123,16 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
+            public void WhiteRgbToHsb()
+            {
+				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
+				var expectedColor = new Hsb { H = 0, S = 0, B = 1, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
             public void WhiteRgbToHunterLab()
             {
 				var knownColor = new Rgb { R = 255, G = 255, B = 255, };
@@ -167,16 +167,6 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
 				var expectedColor = new Hsl { H = 0, S = 0, L = 0, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void BlackRgbToHsb()
-            {
-				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
-				var expectedColor = new Hsb { H = 0, S = 0, B = 0, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -253,6 +243,16 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
+            public void BlackRgbToHsb()
+            {
+				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
+				var expectedColor = new Hsb { H = 0, S = 0, B = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
             public void BlackRgbToHunterLab()
             {
 				var knownColor = new Rgb { R = 0, G = 0, B = 0, };
@@ -287,16 +287,6 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
 				var expectedColor = new Hsl { H = 43, S = 74, L = 49, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void GoldenrodRgbToHsb()
-            {
-				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
-				var expectedColor = new Hsb { H = 43, S = 74, B = 49, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -373,6 +363,16 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
+            public void GoldenrodRgbToHsb()
+            {
+				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
+				var expectedColor = new Hsb { H = 42.903, S = .85, B = .85, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
             public void GoldenrodRgbToHunterLab()
             {
 				var knownColor = new Rgb { R = 218, G = 165, B = 32, };
@@ -417,16 +417,6 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Cmy { C = .72549, M = .49020, Y = .29412, };
 				var expectedColor = new Hsl { H = 207, S = 44, L = 49, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void SteelBlueCmyToHsb()
-            {
-				var knownColor = new Cmy { C = .72549, M = .49020, Y = .29412, };
-				var expectedColor = new Hsb { H = 207, S = 44, B = 49, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -533,16 +523,6 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
-            public void DarkVioletCmykToHsb()
-            {
-				var knownColor = new Cmyk { C = .29858, M = 1, Y = 0, K = .17255, };
-				var expectedColor = new Hsb { H = 282, S = 100, B = 41, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
             public void DarkVioletCmykToLab()
             {
 				var knownColor = new Cmyk { C = .29858, M = 1, Y = 0, K = .17255, };
@@ -633,16 +613,6 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
-            public void AliceBlueHslToHsb()
-            {
-				var knownColor = new Hsl { H = 208, S = 100, L = 97, };
-				var expectedColor = new Hsb { H = 208, S = 100, B = 97, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
             public void AliceBlueHslToLab()
             {
 				var knownColor = new Hsl { H = 208, S = 100, L = 97, };
@@ -686,106 +656,6 @@ namespace ColorMine.Test.ColorSpaces
             public void AliceBlueHslToYxy()
             {
 				var knownColor = new Hsl { H = 208, S = 100, L = 97, };
-				var expectedColor = new Yxy { Y1 = 92.880, X = .30363, Y2 = .32210, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-
-        }
-	}
-
-	public class HsbTest
-    {
-		[TestClass]
-        public class To : ColorSpaceTest
-        {
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToCmy()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Cmy { C = .06, M = .028, Y = 0, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToCmyk()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Cmyk { C = .06, M = .028, Y = 0, K = 0, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToHsl()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Hsl { H = 208, S = 100, L = 97, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToHsb()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Hsb { H = 208, S = 100, B = 97, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToLab()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Lab { L = 97.179, A = -1.3688, B = -4.358, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToLch()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Lch { L = 97.179, C = 4.5683, H = 252.551, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToRgb()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Rgb { R = 240, G = 248, B = 255, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToXyz()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
-				var expectedColor = new Xyz { X = 87.553, Y = 92.880, Z = 107.921, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void AliceBlueHsbToYxy()
-            {
-				var knownColor = new Hsb { H = 208, S = 100, B = 97, };
 				var expectedColor = new Yxy { Y1 = 92.880, X = .30363, Y2 = .32210, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
@@ -923,16 +793,6 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
-            public void MaroonLchToHsb()
-            {
-				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
-				var expectedColor = new Hsb { H = 0, S = 100, B = 24.5, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
             public void MaroonLchToLab()
             {
 				var knownColor = new Lch { L = 24.829, C = 60.093, H = 38.180, };
@@ -1023,16 +883,6 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
-            public void RivergumXyzToHsb()
-            {
-				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
-				var expectedColor = new Hsb { H = 109.999, S = 8.654, B = 40.7843, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
             public void RivergumXyzToLab()
             {
 				var knownColor = new Xyz { X = 13.123, Y = 15.372, Z = 13.174, };
@@ -1117,16 +967,6 @@ namespace ColorMine.Test.ColorSpaces
             {
 				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
 				var expectedColor = new Hsl { H = 60, S = 0.7874, L = 75.098, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
-            public void SilverLuvToHsb()
-            {
-				var knownColor = new Luv { L = 77.704, U = .001, V = -.013, };
-				var expectedColor = new Hsb { H = 60, S = 0.7874, B = 75.098, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);
             }
@@ -1233,16 +1073,6 @@ namespace ColorMine.Test.ColorSpaces
 
 			
 			[TestMethod]
-            public void AquamarineHsvToHsb()
-            {
-				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
-				var expectedColor = new Hsb { H = 160, S = 100, B = 74.9019, };
-
-                ExpectedValuesForKnownColor(knownColor,expectedColor);
-            }
-
-			
-			[TestMethod]
             public void AquamarineHsvToLab()
             {
 				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
@@ -1296,6 +1126,106 @@ namespace ColorMine.Test.ColorSpaces
             public void AquamarineHsvToLuv()
             {
 				var knownColor = new Hsv { H = 160, S = .5, V = 1, };
+				var expectedColor = new Luv { L = 92.036, U = -55.917, V = 21.99756, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+
+        }
+	}
+
+	public class HsbTest
+    {
+		[TestClass]
+        public class To : ColorSpaceTest
+        {
+
+			
+			[TestMethod]
+            public void AquamarineHsbToCmy()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Cmy { C = .50196, M = 0, Y = .16666, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToCmyk()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Cmyk { C = .5, M = 0, Y = .16666, K = 0, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToHsl()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Hsl { H = 160, S = 100, L = 74.9019, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToLab()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Lab { L = 92.036, A = -45.521, B = 9.49689, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToLch()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Lch { L = 92.036, C = 46.545, H = 167.957, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToRgb()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Rgb { R = 127, G = 255, B = 212, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToXyz()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Xyz { X = 56.396, Y = 80.785, Z = 74.908, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToYxy()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
+				var expectedColor = new Yxy { Y1 = 80.785, X = .26591, Y2 = .38090, };
+
+                ExpectedValuesForKnownColor(knownColor,expectedColor);
+            }
+
+			
+			[TestMethod]
+            public void AquamarineHsbToLuv()
+            {
+				var knownColor = new Hsb { H = 160, S = .5, B = 1, };
 				var expectedColor = new Luv { L = 92.036, U = -55.917, V = 21.99756, };
 
                 ExpectedValuesForKnownColor(knownColor,expectedColor);

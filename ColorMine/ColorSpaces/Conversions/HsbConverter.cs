@@ -1,29 +1,29 @@
 ﻿namespace ColorMine.ColorSpaces.Conversions
 {
     /// <summary>
-    /// HSB is another name for HSL
+    /// HSB is another name for HSV
     /// </summary>
     internal static class HsbConverter
     {
         internal static void ToColorSpace(IRgb color, IHsb item)
         {
-            var hsl = new Hsl();
-            HslConverter.ToColorSpace(color, hsl);
+            var hsv = new Hsv();
+            HsvConverter.ToColorSpace(color, hsv);
 
-            item.H = hsl.H;
-            item.S = hsl.S;
-            item.B = hsl.L;
+            item.H = hsv.H;
+            item.S = hsv.S;
+            item.B = hsv.V;
         }
 
         internal static IRgb ToColor(IHsb item)
         {
-            var hsl = new Hsl
+            var hsv = new Hsv
                 {
                     H = item.H,
                     S = item.S,
-                    L = item.B
+                    V = item.B
                 };
-            return HslConverter.ToColor(hsl);
+            return HsvConverter.ToColor(hsv);
         }
     }
 }
