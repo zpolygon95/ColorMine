@@ -10,45 +10,27 @@
         <description>
           Open source library that makes converting and comparing colors easy.
 
-          Supported Color Models:
+          ## Supported Color Models:
+          * CMY
+          * CMYK
+          * HSL
+          * HSB
+          * HSV
+          * CIE L*AB
+          * Hunter LAB
+          * LCH
+          * LUV
+          * sRGB
+          * XYZ
+          * YXY
 
-          CMY
-
-          CMYK
-
-          HSL
-
-          HSB
-
-          HSV
-
-          CIE L*AB
-
-          Hunter LAB
-
-          LCH
-
-          LUV
-
-          sRGB
-
-          XYZ
-
-          YXY
-
-          Supported Comparisons
-
-          CIE76
-
-          CMC l:c
-
-          CIE94
-
-          CIE2000
+          ## Supported Comparisons
+          * CIE76
+          * CMC l:c
+          * CIE94
+          * CIE2000
 
           Demonstrations at http://colormine.org.
-
-          To install ColorMine, run the following command in the Package Manager Console
         </description>
     </metadata>
     <files>
