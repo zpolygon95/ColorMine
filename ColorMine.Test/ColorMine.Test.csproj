@@ -63,9 +63,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ColorSets\AllCounterCounterTest.cs" />
-    <Compile Include="ColorSets\ColorCounterTest.cs" />
-    <Compile Include="ColorSets\KMeansClusteringCounterTest.cs" />
+    <Compile Include="Sets\AllCounterCounterTest.cs" />
+    <Compile Include="Sets\ColorCounterTest.cs" />
+    <Compile Include="Sets\KMeansClusteringCounterTest.cs" />
     <Compile Include="ColorSpaces\ColorSpaceTest.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

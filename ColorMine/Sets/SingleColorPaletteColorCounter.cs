@@ -3,7 +3,7 @@ using System.Linq;
 using ColorMine.ColorSpaces;
 using ColorMine.ColorSpaces.Comparisons;
 
-namespace ColorMine.ColorSets
+namespace ColorMine.Sets
 {
     /// <summary>
     /// Converts each individual color to the nearest color in the Palette, based on the ComparisonStrategy

@@ -1,6 +1,6 @@
 ﻿using ColorMine.ColorSpaces;
 
-namespace ColorMine.ColorSets
+namespace ColorMine.Sets
 {
     public interface IColorMatrix
     {

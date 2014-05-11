@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ColorMine.ColorSpaces;
 
-namespace ColorMine.ColorSets
+namespace ColorMine.Sets
 {
     /// <summary>
     /// Count up ALL colors in an matrix

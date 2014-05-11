@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ColorMine.ColorSpaces;
 
-namespace ColorMine.ColorSets
+namespace ColorMine.Sets
 {
     /// <summary>
     /// http://msdn.microsoft.com/en-us/magazine/jj891054.aspx

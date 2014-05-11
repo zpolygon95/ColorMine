@@ -1,9 +1,9 @@
-﻿using ColorMine.ColorSets;
-using ColorMine.ColorSpaces;
+﻿using ColorMine.ColorSpaces;
+using ColorMine.Sets;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace ColorMine.Test.ColorSets
+namespace ColorMine.Test.Sets
 {
     [TestClass]
     public class KMeansClusteringCounterTest
