@@ -1,7 +1,9 @@
 # ColorMine
 
-MIT Licensed .Net library that makes converting between color spaces and comparing colors easy.
+# CURRENTLY UNDER CONSTRUCTION
 
+Java port of a MIT Licensed .Net library that makes converting between color spaces and comparing colors easy.
+Originally by GitHub User THEJoezack, forked on 2014-10-10
 
 ## Getting Started
 
