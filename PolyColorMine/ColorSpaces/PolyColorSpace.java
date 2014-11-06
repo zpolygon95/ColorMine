@@ -16,7 +16,7 @@ public abstract class PolyColorSpace
 	{
 		if (!PolyColorSpace.class.isAssignableFrom(colorSpace))
 		{
-			throw new IllegalArgumentException("Argument colorSpace must be assignable from PolyColorSpace");
+			throw new IllegalArgumentException("Argument colorSpace must extend PolyColorSpace");
 		}
 		try
 		{
