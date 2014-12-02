@@ -13,6 +13,15 @@ PolyColorMine is a non-official port of ColorMine to Java by GitHub User
 the lack of existing libraries for java that intuitively trasform colorspace
 coordinates, and perform accurate comparisons thereof.
 
+## Building
+
+An *experimental* GNU Make file is included in the PolyColorMine directory,
+simply run `make` (or `make -s` if you like clean output) in that
+directory to compile all sources. Support for creating jar files with make is
+to be implemented.
+
+Run `make clean` to delete all compiled sources, and the `@sources` file
+
 ## List of Implemented Features
 
 +	Supports RGB
@@ -37,5 +46,6 @@ coordinates, and perform accurate comparisons thereof.
 ## To-Do
 
 +	Change names to comply with standard java practice
-+	Format files into a logical package structure
++	~~Format files into a logical package structure~~
 +	Document everything
++	Complete makefile
