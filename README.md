@@ -15,12 +15,14 @@ coordinates, and perform accurate comparisons thereof.
 
 ## Building
 
-An *experimental* GNU Make file is included in the PolyColorMine directory,
+~~An *experimental* GNU Make file is included in the PolyColorMine directory,
 simply run `make` (or `make -s` if you like clean output) in that
 directory to compile all sources. Support for creating jar files with make is
 to be implemented.
 
-Run `make clean` to delete all compiled sources, and the `@sources` file
+Run `make clean` to delete all compiled sources, and the `@sources` file~~
+
+I have abandoned the make file for a bash script.
 
 ## List of Implemented Features
 
@@ -45,7 +47,7 @@ Run `make clean` to delete all compiled sources, and the `@sources` file
 
 ## To-Do
 
-+	Change names to comply with standard java practice
++	~~Change names to comply with standard java practice~~
 +	~~Format files into a logical package structure~~
 +	Document everything
 +	Complete makefile

@@ -1,0 +1,16 @@
+build/main/io/github/zpolygon95/polycolormine/comparison/PolyCie94Comparison$1.class
+build/main/io/github/zpolygon95/polycolormine/comparison/PolyCie94Comparison$Application.class
+build/main/io/github/zpolygon95/polycolormine/comparison/PolyCie94Comparison$ApplicationConstants.class
+build/main/io/github/zpolygon95/polycolormine/comparison/PolyCie94Comparison.class
+build/main/io/github/zpolygon95/polycolormine/PolyColorSpaceComparison.class
+build/main/io/github/zpolygon95/polycolormine/PolyColorSpace.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyXYZ.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyRGB$PolyRGBConverter.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyLab.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyCmy$PolyCmyConverter.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyCmy.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyXYZ$PolyXYZConverter.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyRGB.class
+build/main/io/github/zpolygon95/polycolormine/colorspace/PolyLab$PolyLabConverter.class
+
+
