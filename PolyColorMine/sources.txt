@@ -1,9 +1,0 @@
-src/io/github/zpolygon95/polycolormine/comparison/PolyCie94Comparison.java
-src/io/github/zpolygon95/polycolormine/PolyColorSpaceComparison.java
-src/io/github/zpolygon95/polycolormine/PolyColorSpace.java
-src/io/github/zpolygon95/polycolormine/colorspace/PolyXYZ.java
-src/io/github/zpolygon95/polycolormine/colorspace/PolyRGB.java
-src/io/github/zpolygon95/polycolormine/colorspace/PolyCmy.java
-src/io/github/zpolygon95/polycolormine/colorspace/PolyLab.java
-
-
