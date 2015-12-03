@@ -43,7 +43,7 @@ _ReSharper*/
 
 #Project files
 [Bb]uild/
-PolyColorMine/build/main/*
+*.class
 
 #Subversion files
 .svn
