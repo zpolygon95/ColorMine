@@ -1,43 +1,104 @@
 //package pctest;
 
-import io.github.zpolygon95.polycolormine.colorspace.PolyRGB;
-import io.github.zpolygon95.polycolormine.comparison.PolyCie94Comparison;
+import io.github.zpolygon95.polycolormine.*;
+import io.github.zpolygon95.polycolormine.colorspace.*;
+import java.lang.NumberFormatException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PolyColorTest
 {
+	public static String COM_LIST =
+		"help -- Displays this menu\n" +
+		"quit -- Synonym for exit\n" +
+		"exit -- Stops the program\n";
+	public static String CS_LIST =
+		"RGB";
+	public static ArrayList<PolyColorSpace> vars = new ArrayList<>();
+	public static ArrayList<String> names = new ArrayList<>();
+
 	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		boolean run = true;
+		System.out.println("+--------------------------------------------------------------+");
+		System.out.println("| PolyColorTest --- Test program for the PolyColorMine library |");
+		System.out.println("| run `help` for a list of commands                            |");
+		System.out.println("+--------------------------------------------------------------+");
+		while (run)
+		{
+			System.out.print(">>> ");
+			String ui = sc.nextLine();
+			String[] uiArgs = ui.split(" ");
+			if (uiArgs.length > 0)
+			{
+				switch (uiArgs[0])
+				{
+					case "set":
+						if (parseSet(uiArgs))
+							System.out.println("OK.");
+						else
+							System.out.println("Usage: set <name> <type> <values ...>");
+						break;
+					case "get":
+						if (uiArgs.length > 1)
+						{
+							for (int i = 0; i < names.size(); i++)
+							{
+								if (names.get(i).equals(uiArgs[1]))
+								{
+									System.out.println(vars.get(i));
+									break;
+								}
+							}
+						}
+						break;
+					case "help":
+						System.out.println("List of valid commands:\n" + COM_LIST);
+						break;
+					case "quit":
+					case "exit":
+						run = false;
+						System.out.println("done.");
+						break;
+					default:
+						System.out.println("Command `" + uiArgs[0] + "\' not recognized.");
+						System.out.println("Type `help\' for a list of valid commands.");
+				}
+			}
+		}
+	}
+
+	public static boolean parseSet(String[] args)
 	{
 		try
 		{
-
-			if (args.length == 6)
+			if (args.length > 3)
 			{
-				int r1 = Integer.parseInt(args[0]);
-				double r1d = ((double) r1);
-				int g1 = Integer.parseInt(args[1]);
-				double g1d = ((double) g1);
-				int b1 = Integer.parseInt(args[2]);
-				double b1d = ((double) b1);
-				int r2 = Integer.parseInt(args[3]);
-				double r2d = ((double) r2);
-				int g2 = Integer.parseInt(args[4]);
-				double g2d = ((double) g2);
-				int b2 = Integer.parseInt(args[5]);
-				double b2d = ((double) b2);
-				PolyRGB rgb1 = new PolyRGB(r1d, g1d, b1d);
-				PolyRGB rgb2 = new PolyRGB(r2d, g2d, b2d);
-				double delta = new PolyCie94Comparison().compare(rgb1, rgb2);
-				System.out.println("CIE94(["+rgb1.R+","+rgb1.G+","+rgb1.B+"], ["+rgb1.R+","+rgb1.G+","+rgb1.B+"]) = " + delta);
+				switch (args[2])
+				{
+					case "RGB":
+					case "rgb":
+						if (args.length >= 6)
+						{
+							vars.add(new PolyRGB(Double.parseDouble(args[3]),
+								Double.parseDouble(args[4]),
+								Double.parseDouble(args[5])));
+							names.add(args[2]);
+						}
+						else return false;
+						break;
+					default:
+						System.out.println("List of valid types:\n" + CS_LIST);
+						return false;
+				}
 			}
-			else
-			{
-				System.out.println("Not enough arguments! (6)");
-			}
-
+			else return false;
 		}
-		catch (NumberFormatException ex)
+		catch(NumberFormatException ex)
 		{
-			System.out.println("An Error Ocurred!");
+			return false;
 		}
+		return true;
 	}
 }
