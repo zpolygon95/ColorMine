@@ -2,6 +2,7 @@
 
 import io.github.zpolygon95.polycolormine.*;
 import io.github.zpolygon95.polycolormine.colorspace.*;
+import io.github.zpolygon95.polycolormine.comparison.*;
 import java.lang.NumberFormatException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -53,6 +54,17 @@ public class PolyColorTest
 							}
 						}
 						break;
+					case "list":
+						System.out.println("List of current variables:");
+						for (int i = 0; i < names.size(); i++)
+						{
+							System.out.println(names.get(i) + " = " + vars.get(i));
+						}
+						break;
+					case "cie94":
+					case "CIE94":
+						System.out.println(parseCie94(uiArgs));
+						break;
 					case "help":
 						System.out.println("List of valid commands:\n" + COM_LIST);
 						break;
@@ -75,16 +87,89 @@ public class PolyColorTest
 		{
 			if (args.length > 3)
 			{
-				switch (args[2])
+				switch (args[2].toLowerCase())
 				{
-					case "RGB":
 					case "rgb":
 						if (args.length >= 6)
 						{
+							for (int i = 0; i < names.size(); i++)
+							{
+								if (names.get(i).equals(args[1]))
+								{
+									vars.set(i, new PolyRGB(
+													Double.parseDouble(args[3]),
+													Double.parseDouble(args[4]),
+													Double.parseDouble(args[5])));
+									return true;
+								}
+							}
 							vars.add(new PolyRGB(Double.parseDouble(args[3]),
 								Double.parseDouble(args[4]),
 								Double.parseDouble(args[5])));
-							names.add(args[2]);
+							names.add(args[1]);
+						}
+						else return false;
+						break;
+					case "cmy":
+						if (args.length >= 6)
+						{
+							for (int i = 0; i < names.size(); i++)
+							{
+								if (names.get(i).equals(args[1]))
+								{
+									vars.set(i, new PolyCmy(
+													Double.parseDouble(args[3]),
+													Double.parseDouble(args[4]),
+													Double.parseDouble(args[5])));
+									return true;
+								}
+							}
+							vars.add(new PolyCmy(Double.parseDouble(args[3]),
+								Double.parseDouble(args[4]),
+								Double.parseDouble(args[5])));
+							names.add(args[1]);
+						}
+						else return false;
+						break;
+					case "lab":
+						if (args.length >= 6)
+						{
+							for (int i = 0; i < names.size(); i++)
+							{
+								if (names.get(i).equals(args[1]))
+								{
+									vars.set(i, new PolyLab(
+													Double.parseDouble(args[3]),
+													Double.parseDouble(args[4]),
+													Double.parseDouble(args[5])));
+									return true;
+								}
+							}
+							vars.add(new PolyLab(Double.parseDouble(args[3]),
+								Double.parseDouble(args[4]),
+								Double.parseDouble(args[5])));
+							names.add(args[1]);
+						}
+						else return false;
+						break;
+					case "xyz":
+						if (args.length >= 6)
+						{
+							for (int i = 0; i < names.size(); i++)
+							{
+								if (names.get(i).equals(args[1]))
+								{
+									vars.set(i, new PolyXYZ(
+													Double.parseDouble(args[3]),
+													Double.parseDouble(args[4]),
+													Double.parseDouble(args[5])));
+									return true;
+								}
+							}
+							vars.add(new PolyXYZ(Double.parseDouble(args[3]),
+								Double.parseDouble(args[4]),
+								Double.parseDouble(args[5])));
+							names.add(args[1]);
 						}
 						else return false;
 						break;
@@ -100,5 +185,59 @@ public class PolyColorTest
 			return false;
 		}
 		return true;
+	}
+
+	public static String parseCie94(String[] args)
+	{
+		String ret = "";
+		if (args.length >= 3)
+		{
+			PolyColorSpace a = null;
+			PolyColorSpace b = null;
+			for (int i = 0; i < names.size(); i++)
+			{
+				if (names.get(i).equals(args[1]))
+					a = vars.get(i);
+				if (names.get(i).equals(args[2]))
+					b = vars.get(i);
+			}
+			if (a != null)
+			{
+				if (b != null)
+				{
+					double val = 0;
+					if (args.length > 3)
+					{
+						if (args[3].toLowerCase().equals("textiles"))
+						{
+							ret += "Using Textiles Application\n";
+							PolyCie94Comparison com =
+								new PolyCie94Comparison(PolyCie94Comparison.Application.Textiles);
+							val = com.compare(a, b);
+						}
+						else
+						{
+							ret += "Using GraphicArts Application\n";
+							PolyCie94Comparison com =
+								new PolyCie94Comparison(PolyCie94Comparison.Application.GraphicArts);
+							val = com.compare(a, b);
+						}
+					}
+					else
+					{
+						ret += "Using Default Application\n";
+						PolyCie94Comparison com = new PolyCie94Comparison();
+						val = com.compare(a, b);
+					}
+					return ret + "Cie94(" + a + ", " + b + ") = " + val;
+				}
+				else
+					ret += "variable `" + args[2] + "\' not defined.\n";
+			}
+			else
+				ret += "variable `" + args[1] + "\' not defined.\n";
+		}
+		ret += "Usage: cie94 <var a> <var b> [graphic | textiles]";
+		return ret;
 	}
 }

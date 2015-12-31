@@ -76,4 +76,10 @@ public class PolyLab extends PolyColorSpace
 			return n > PolyXYZ.PolyXYZConverter.Epsilon ? cubicRoot(n) : (PolyXYZ.PolyXYZConverter.Kappa * n + 16) / 116;
 		}
 	}
+
+	@Override
+	public String toString()
+	{
+		return "CIE-L*ab(" + L + ", " + A + ", " + B + ")";
+	}
 }

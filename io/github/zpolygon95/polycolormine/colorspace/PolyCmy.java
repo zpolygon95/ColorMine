@@ -48,4 +48,10 @@ public class PolyCmy extends PolyColorSpace
 				(1 - item.Y) * 255.0);
 		}
 	}
+
+	@Override
+	public String toString()
+	{
+		return "CMY(" + C + ", " + M + ", " + Y + ")";
+	}
 }

@@ -3,6 +3,7 @@ PolyColorSpace.jar: classes.txt
 		rm PolyColorSpace.jar ; \
 	fi
 	jar cfn PolyColorSpace.jar @classes.txt
+	echo "PolyColorSpace.jar created"
 
 classes.txt: sources.txt
 	javac @sources.txt
@@ -13,15 +14,15 @@ classes.txt: sources.txt
 		if diff classes.txt classes1.txt > /dev/null ; then \
 			rm classes1.txt ; \
 			touch classes.txt ; \
-			echo "classes.txt >> has not been modified" ; \
+			echo "classes.txt has not been modified" ; \
 		else \
 			rm classes.txt ; \
 			mv classes1.txt classes.txt ; \
-			echo "classes.txt >> has been updated" ; \
+			echo "classes.txt updated" ; \
 		fi ; \
 	else \
 		mv classes1.txt classes.txt ; \
-		echo "classes.txt >> has been created" ; \
+		echo "classes.txt created" ; \
 	fi
 
 SOURCES := $(find io -name "*.java")
@@ -36,11 +37,11 @@ sources.txt: $(SOURCES)
 		else \
 			rm sources.txt ; \
 			mv sources1.txt sources.txt ; \
-			echo "sources.txt has been updated" ; \
+			echo "sources.txt updated" ; \
 		fi ; \
 	else \
 		mv sources1.txt sources.txt ; \
-		echo "sources.txt has been created" ; \
+		echo "sources.txt created" ; \
 	fi
 
 clean:
@@ -48,10 +49,11 @@ clean:
 	rm -f sources.txt
 	rm -f classes.txt
 	rm -f PolyColorSpace.jar
+	echo "removed transient files"
 
 run: PolyColorTest.class PolyColorSpace.jar
 	java -cp PolyColorSpace.jar:. PolyColorTest $(ARGS)
 
 PolyColorTest.class: PolyColorTest.java
 	javac -cp PolyColorSpace.jar:. PolyColorTest.java
-
+	echo "Compiled PolyColorTest with PolyColorSpace.jar"

@@ -46,4 +46,10 @@ public class PolyRGB extends PolyColorSpace
 			return item;
 		}
 	}
+
+	@Override
+	public String toString()
+	{
+		return "RGB(" + R + ", " + G + ", " + B + ")";
+	}
 }

@@ -94,4 +94,10 @@ public class PolyXYZ extends PolyColorSpace
 			return (n > 0.04045 ? Math.pow((n + 0.055) / 1.055, 2.4) : n / 12.92) * 100.0;
 		}
 	}
+
+	@Override
+	public String toString()
+	{
+		return "XYZ(" + X + ", " + Y + ", " + Z + ")";
+	}
 }
