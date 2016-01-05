@@ -10,9 +10,14 @@ import java.util.Scanner;
 public class PolyColorTest
 {
 	public static String COM_LIST =
-		"help -- Displays this menu\n" +
-		"quit -- Synonym for exit\n" +
-		"exit -- Stops the program\n";
+		"help  -- Displays this menu\n" +
+		"      -- Type `help <command>\' for usage" +
+		"quit  -- Synonym for exit\n" +
+		"exit  -- Stops the program\n" +
+		"set   -- creates / modifies a named variable\n" +
+		"get   -- prints the value of a named variable\n" +
+		"list  -- lists all named variables\n" +
+		"cie94 -- performs a cie94 comparison on two named variables";
 	public static String CS_LIST =
 		"RGB";
 	public static ArrayList<PolyColorSpace> vars = new ArrayList<>();
@@ -66,7 +71,41 @@ public class PolyColorTest
 						System.out.println(parseCie94(uiArgs));
 						break;
 					case "help":
-						System.out.println("List of valid commands:\n" + COM_LIST);
+						if (uiArgs.length > 1)
+						{
+							switch (uiArgs[1].toLowerCase())
+							{
+								case "help":
+									System.out.println("help [command]");
+									System.out.println("-- lists all valid commands, or optionally " +
+										"the invocation of a specific command.");
+									break;
+								case "exit":
+									System.out.println("NYI");
+									break;
+								case "quit":
+									System.out.println("NYI");
+									break;
+								case "set":
+									System.out.println("NYI");
+									break;
+								case "get":
+									System.out.println("NYI");
+									break;
+								case "list":
+									System.out.println("NYI");
+									break;
+								case "cie94":
+									System.out.println("NYI");
+									break;
+								default:
+									System.out.println("Command `" + uiArgs[0] + "\' not recognized.");
+									System.out.println("Type `help\' for a list of valid commands.");
+									break;
+							}
+						}
+						else
+							System.out.println("List of valid commands:\n" + COM_LIST);
 						break;
 					case "quit":
 					case "exit":
