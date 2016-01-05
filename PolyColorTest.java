@@ -66,6 +66,12 @@ public class PolyColorTest
 							System.out.println(names.get(i) + " = " + vars.get(i));
 						}
 						break;
+					case "conv":
+						if (parseConv(uiArgs))
+							System.out.println("OK.");
+						else
+							System.out.println("Usage: conv <var> <type>");
+						break;
 					case "cie94":
 					case "CIE94":
 						System.out.println(parseCie94(uiArgs));
@@ -120,110 +126,85 @@ public class PolyColorTest
 		}
 	}
 
-	public static boolean parseSet(String[] args)
+	public static void setVar(String name, PolyColorSpace value)
+	{
+		for (int i = 0; i < names.size(); i++)
+		{
+			if (names.get(i).equals(name))
+			{
+				vars.set(i, value);
+				return;
+			}
+		}
+		vars.add(value);
+		names.add(name);
+	}
+
+	public static PolyColorSpace parseVar(String type, String... values)
 	{
 		try
 		{
-			if (args.length > 3)
+			if (values.length >= 3)
 			{
-				switch (args[2].toLowerCase())
+				switch (type.toLowerCase())
 				{
 					case "rgb":
-						if (args.length >= 6)
-						{
-							for (int i = 0; i < names.size(); i++)
-							{
-								if (names.get(i).equals(args[1]))
-								{
-									vars.set(i, new PolyRGB(
-													Double.parseDouble(args[3]),
-													Double.parseDouble(args[4]),
-													Double.parseDouble(args[5])));
-									return true;
-								}
-							}
-							vars.add(new PolyRGB(Double.parseDouble(args[3]),
-								Double.parseDouble(args[4]),
-								Double.parseDouble(args[5])));
-							names.add(args[1]);
-						}
-						else return false;
-						break;
+						return (PolyColorSpace)
+							new PolyRGB(
+							Double.parseDouble(values[0]),
+							Double.parseDouble(values[1]),
+							Double.parseDouble(values[2]));
 					case "cmy":
-						if (args.length >= 6)
-						{
-							for (int i = 0; i < names.size(); i++)
-							{
-								if (names.get(i).equals(args[1]))
-								{
-									vars.set(i, new PolyCmy(
-													Double.parseDouble(args[3]),
-													Double.parseDouble(args[4]),
-													Double.parseDouble(args[5])));
-									return true;
-								}
-							}
-							vars.add(new PolyCmy(Double.parseDouble(args[3]),
-								Double.parseDouble(args[4]),
-								Double.parseDouble(args[5])));
-							names.add(args[1]);
-						}
-						else return false;
-						break;
+						return (PolyColorSpace)
+							new PolyCmy(
+							Double.parseDouble(values[0]),
+							Double.parseDouble(values[1]),
+							Double.parseDouble(values[2]));
 					case "lab":
-						if (args.length >= 6)
-						{
-							for (int i = 0; i < names.size(); i++)
-							{
-								if (names.get(i).equals(args[1]))
-								{
-									vars.set(i, new PolyLab(
-													Double.parseDouble(args[3]),
-													Double.parseDouble(args[4]),
-													Double.parseDouble(args[5])));
-									return true;
-								}
-							}
-							vars.add(new PolyLab(Double.parseDouble(args[3]),
-								Double.parseDouble(args[4]),
-								Double.parseDouble(args[5])));
-							names.add(args[1]);
-						}
-						else return false;
-						break;
+						return (PolyColorSpace)
+							new PolyLab(
+							Double.parseDouble(values[0]),
+							Double.parseDouble(values[1]),
+							Double.parseDouble(values[2]));
 					case "xyz":
-						if (args.length >= 6)
-						{
-							for (int i = 0; i < names.size(); i++)
-							{
-								if (names.get(i).equals(args[1]))
-								{
-									vars.set(i, new PolyXYZ(
-													Double.parseDouble(args[3]),
-													Double.parseDouble(args[4]),
-													Double.parseDouble(args[5])));
-									return true;
-								}
-							}
-							vars.add(new PolyXYZ(Double.parseDouble(args[3]),
-								Double.parseDouble(args[4]),
-								Double.parseDouble(args[5])));
-							names.add(args[1]);
-						}
-						else return false;
-						break;
+						return (PolyColorSpace)
+							new PolyXYZ(
+							Double.parseDouble(values[0]),
+							Double.parseDouble(values[1]),
+							Double.parseDouble(values[2]));
 					default:
 						System.out.println("List of valid types:\n" + CS_LIST);
-						return false;
 				}
 			}
-			else return false;
 		}
 		catch(NumberFormatException ex)
 		{
-			return false;
+			System.out.println("Error: Please supply only decimal quantities");
 		}
-		return true;
+		return null;
+	}
+
+	public static boolean parseSet(String[] args)
+	{ // set name type val val val
+		if (args.length == 6)
+		{
+			PolyColorSpace val;
+			if ((val = parseVar(args[2], args[3], args[4], args[5])) != null)
+			{
+				setVar(args[1], val);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static boolean parseConv(String[] args)
+	{
+		// if (args.length >= 3)
+		// {
+
+		// }
+		return false;
 	}
 
 	public static String parseCie94(String[] args)
